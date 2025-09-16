@@ -1,0 +1,50 @@
+# ⚙️ Workflow Detail
+
+---
+
+## ℹ️ Info
+**Name:**  
+[Workflow Name]
+
+**Description:**  
+[Short explanation of what this workflow accomplishes]
+
+**Primary Contact:**  
+- Name: [Full Name]  
+- Email: [Email Address]  
+- Phone: [Phone Number]  
+
+---
+
+## 🎬 Trigger
+> What starts this workflow? (e.g., “Customer submits registration form”)  
+
+---
+
+## 🎯 Goal
+> What outcome does it deliver? (e.g., “Athlete is fully registered for the season”)  
+
+---
+
+## 🪜 Operations (Step-by-Step)
+
+> List the concrete steps (operations) in order.  
+> Each one should be a **verb + entity** (e.g., `Invite.create`).  
+> Keep them short and clear. Use the Notes column for conditions or exceptions.
+
+| # | Step (Operation)       | Description                         | Business Entities | Notes / Conditions            |
+|---|------------------------|-------------------------------------|-------------------|--------------------------------|
+| 1 | Invite.create          | Create a new invite for a team      | Invite, Team      | Only managers can do this step |
+| 2 |                        |                                     |                   |                                |
+| 3 |                        |                                     |                   |                                |
+| 4 |                        |                                     |                   |                                |
+| 5 |                        |                                     |                   |                                |
+
+---
+
+## 🗂️ Version
+- **Created:** [Date]  
+- **Last Updated:** [Date]  
+- **History:** [Notes on changes, revisions, or owners]  
+
+---

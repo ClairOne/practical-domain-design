@@ -1,0 +1,40 @@
+# 🏢 Department Detail
+
+---
+
+## ℹ️ Info
+**Name:**  
+[Department Name]
+
+**Description:**  
+[Short explanation of what this department does]
+
+**Primary Contact:**  
+- Name: [Full Name]  
+- Email: [Email Address]  
+- Phone: [Phone Number]  
+
+---
+
+## ⚙️ Workflows ( SOPs )
+
+> List the repeatable processes this department runs.  
+> Each row should describe *what the workflow does*, *when it starts*, *what the outcome is*,  
+> and *who owns it*. Keep it short and clear.
+
+| # | Workflow / SOP     | Description                         | Trigger                     | Goal                               | Owner / Contact |
+|---|--------------------|-------------------------------------|-----------------------------|------------------------------------|-----------------|
+| 1 | Generate Invoice   | Create and send invoices to members | End of month billing cycle  | Customer receives correct invoice  | Jane Doe (Billing Lead) |
+| 2 |                    |                                     |                             |                                    |                 |
+| 3 |                    |                                     |                             |                                    |                 |
+| 4 |                    |                                     |                             |                                    |                 |
+| 5 |                    |                                     |                             |                                    |                 |
+
+---
+
+## 🗂️ Version
+- **Created:** [Date]  
+- **Last Updated:** [Date]  
+- **History:** [Notes on changes, revisions, or owners]  
+
+---
