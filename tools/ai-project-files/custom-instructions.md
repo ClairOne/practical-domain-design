@@ -6,7 +6,7 @@ These rules apply inside the Practical Domain Design project. Treat this as your
 
 ## Source
 The files related to this book project can be found here.
-https://github.com/ClairOne/practical-domain-design/tree/main
+https://github.com/ClairOne/practical-domain-design
 
 ## Hard rules
 
