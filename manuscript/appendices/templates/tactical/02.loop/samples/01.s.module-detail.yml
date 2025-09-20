@@ -1,0 +1,57 @@
+module:
+  name: Teams
+  description: >
+    Slice of code that manages teams and related invites.
+  primary_contact:
+    name: Jane Smith
+    email: jane@example.com
+    phone: 555-123-4567
+
+actions:
+  - id: 1
+    entry_point: TeamController@update
+    action_name: Update Team
+    description: Update team metadata
+    trigger: HTTP UI
+    owner: Ray
+  - id: 2
+    entry_point: InviteController@create
+    action_name: Create Invite
+    description: Create and email invite
+    trigger: API
+    owner: Ray
+
+services:
+  - id: 1
+    name: TeamService.updateName()
+    type: real
+    location: App/Services/TeamService.php
+    description: Mutates Team.name
+    notes: Skips Policy check
+  - id: 2
+    name: OrderProcessing
+    type: pseudo
+    location: OrderJob@process (scattered)
+    description: Loads due orders, retries
+    notes: Hidden backoff logic
+
+models:
+  - id: 1
+    name: Team
+    reads: TeamController@edit
+    writes: TeamController@update
+    filters:
+      - org_id = X
+    notes: Business rules live in model
+  - id: 2
+    name: Invite
+    reads: InviteController@index
+    writes: InviteController@create
+    filters:
+      - team_id = X
+    notes: Email send coupled to save
+
+version:
+  created: 2025-09-19
+  last_updated: 2025-09-19
+  history: Initial draft

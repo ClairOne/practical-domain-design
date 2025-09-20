@@ -1,0 +1,46 @@
+table:
+  name: 
+  description: 
+
+structure: |
+  # paste CREATE TABLE statement here
+
+keys_timestamps:
+  primary_key: 
+  timestamps:
+    created: 
+    updated: 
+    soft_delete: 
+
+data_access_pattern:
+  orm_in_use: 
+  if_orm:
+    library: 
+    model_file: 
+    model_class: 
+  if_no_orm:
+    pattern: 
+    key_files: 
+
+joins:
+  - with: 
+    on: 
+
+indexes:
+  primary_key: 
+  unique_indexes: 
+    - name: 
+      columns: 
+      purpose: 
+  other_indexes: 
+    - name: 
+      columns: 
+      notes: 
+
+columns:
+  - name: 
+    type: 
+    size_precision: 
+    nullable: 
+    default: 
+    description: 

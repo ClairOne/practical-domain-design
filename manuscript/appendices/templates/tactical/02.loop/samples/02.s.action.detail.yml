@@ -1,0 +1,51 @@
+action:
+  name: Update Team
+  entry_point: TeamController@update
+  description: >
+    Update team metadata such as name, description, and settings.
+  primary_contact:
+    name: Ray Smith
+    email: ray@example.com
+    phone: 555-222-3333
+
+flow:
+  - id: 1
+    step: validate request
+    where: controller
+    services_models: none
+    notes: Missing form request
+  - id: 2
+    step: check permission
+    where: inline (controller)
+    services_models: User, Team
+    notes: Should be Policy
+  - id: 3
+    step: update name
+    where: TeamService.updateName()
+    services_models: Team
+    notes: No audit trail
+  - id: 4
+    step: dispatch event
+    where: inline
+    services_models: TeamUpdated
+    notes: Downstream email
+
+data_touchpoints:
+  reads:
+    - Team (id, name)
+    - User (id, role)
+  writes:
+    - Team (name)
+  side_effects:
+    - Event: TeamUpdated
+    - Email: downstream notification
+
+risks:
+  - Tight coupling to TeamService
+  - Missing audit logging
+  - Inline permission check bypasses Policy
+
+version:
+  created: 2025-09-19
+  last_updated: 2025-09-19
+  history: Initial draft

@@ -1,0 +1,40 @@
+service:
+  name: PainPointCommandService
+  description: Handles creation, update, and deletion of PainPoint entities in the domain.
+  type: command
+  data_source: DB table (pain_points) + model (App/Models/Phase1/PainPoint)
+  code_location: App/Services/Phase1/PainPointCommandService.php
+
+core_operations:
+  - name: create
+    signature: "create(CreatePainPointInput $input): PainPointDTO"
+    return_type: PainPointDTO
+    purpose: Creates a new pain point record.
+    quirks: Sets default status = 'new'
+  - name: update
+    signature: "update(PainPoint $entity, UpdatePainPointInput $input): PainPointDTO"
+    return_type: PainPointDTO
+    purpose: Updates an existing pain point.
+    quirks: Ignores nulls
+  - name: delete
+    signature: "delete(PainPoint $entity): bool"
+    return_type: bool
+    purpose: Soft-deletes a pain point.
+    quirks: Returns false on constraint violations
+
+dependencies:
+  models:
+    - App\Models\Phase1\PainPoint
+  dtos:
+    - CreatePainPointInput
+    - UpdatePainPointInput
+    - PainPointDTO
+  other_services_apis: []
+
+business_notes:
+  defaults: Pain points start with status 'new'
+  special_rules: Only soft deletes supported
+  partial_updates: Null fields are ignored
+  error_handling: Throws ModelNotFoundException on missing records
+
+summary: PainPointCommandService encapsulates business logic for managing pain points. Contract = create, update, delete pain points with rules for defaults and safe updates.

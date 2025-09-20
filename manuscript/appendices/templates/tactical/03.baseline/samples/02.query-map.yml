@@ -1,0 +1,41 @@
+query_map:
+  tables_involved:
+    - invoices
+    - payments
+
+query_operations:
+  create:
+    - location: File.php:67
+      snippet: "INSERT INTO invoices (customer_id, total) VALUES (?, ?)"
+      notes: Create new invoice
+  read:
+    - location: File.php:45
+      snippet: "SELECT * FROM invoices WHERE customer_id = ?"
+      notes: List invoices for a user
+    - location: OtherFile.php:102
+      snippet: "SELECT * FROM payments WHERE invoice_id = ?"
+      notes: Payment lookup
+  update:
+    - location: File.php:89
+      snippet: "UPDATE invoices SET status = ? WHERE id = ?"
+      notes: Update invoice status
+  delete:
+    - location: File.php:123
+      snippet: "DELETE FROM invoices WHERE id = ?"
+      notes: Remove cancelled invoice
+  other:
+    - location: File.php:145
+      snippet: "CALL process_invoice(?)"
+      notes: Complex business logic
+
+joins_relationships:
+  - tables: invoices ↔ users
+    on: invoices.user_id = users.id
+  - tables: invoice_items ↔ products
+    on: invoice_items.product_id = products.id
+
+hotspots:
+  - location: File.php:45
+    risk: Potential N+1 query when loading invoices
+  - location: File.php:89
+    risk: Critical write on payment flow

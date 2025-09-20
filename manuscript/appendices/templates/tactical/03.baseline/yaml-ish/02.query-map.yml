@@ -1,0 +1,33 @@
+query_map:
+  tables_involved:
+    - 
+
+query_operations:
+  create:
+    - location: 
+      snippet: 
+      notes: 
+  read:
+    - location: 
+      snippet: 
+      notes: 
+  update:
+    - location: 
+      snippet: 
+      notes: 
+  delete:
+    - location: 
+      snippet: 
+      notes: 
+  other:
+    - location: 
+      snippet: 
+      notes: 
+
+joins_relationships:
+  - tables: 
+    on: 
+
+hotspots:
+  - location: 
+    risk: 

@@ -1,0 +1,36 @@
+module:
+  name: 
+  description: 
+  primary_contact:
+    name: 
+    email: 
+    phone: 
+
+actions: # Entry points
+  - id: 
+    entry_point: 
+    action_name: 
+    description: 
+    trigger: 
+    owner: 
+
+services: # Services and pseudo-services
+  - id: 
+    name: 
+    type:  # real | pseudo
+    location: 
+    description: 
+    notes: 
+
+models:
+  - id: 
+    name: 
+    reads: 
+    writes: 
+    filters: 
+    notes: 
+
+version:
+  created: 
+  last_updated: 
+  history: 

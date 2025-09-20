@@ -1,0 +1,28 @@
+action:
+  name: 
+  entry_point: 
+  description: 
+  primary_contact:
+    name: 
+    email: 
+    phone: 
+
+flow: # Step-by-step
+  - id: 
+    step: 
+    where: 
+    services_models: 
+    notes: 
+
+data_touchpoints:
+  reads: 
+  writes: 
+  side_effects: 
+
+risks:
+  - 
+
+version:
+  created: 
+  last_updated: 
+  history: 

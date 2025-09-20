@@ -1,0 +1,26 @@
+service:
+  name: 
+  description: 
+  type:  # command | search | hybrid
+  data_source: 
+  code_location: 
+
+core_operations:
+  - name: 
+    signature: 
+    return_type: 
+    purpose: 
+    quirks: 
+
+dependencies:
+  models: 
+  dtos: 
+  other_services_apis: 
+
+business_notes:
+  defaults: 
+  special_rules: 
+  partial_updates: 
+  error_handling: 
+
+summary: 
