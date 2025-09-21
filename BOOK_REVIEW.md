@@ -1,521 +1,429 @@
 # Practical Domain Design - Complete Manuscript
-**Generated:** Sat Sep 20 02:30:13 PM EST 2025
+**Generated:** Sat Sep 20 10:33:56 PM EST 2025
 **Repository:** https://github.com/ClairOne/practical-domain-design
 **Analysis URL:** https://raw.githubusercontent.com/ClairOne/practical-domain-design/main/BOOK_REVIEW.md
 
 ---
 
-## 📖 Part 1 - Introduction/0.1.introduction.md
+## 📖 Part 1 - The Problem & The Fix/1.1.introduction.md
 
-# Chapter 1: Introduction / Overview
+# Chapter 1.1: Introduction / Overview
 
-**Why another book?**
-I designed PDD in response to the problems I’ve run into over a 30-year career in software development. I love the idea of Domain-Driven Design. As a developer, the artifacts of DDD make my job easier. But the constant struggle was getting others to adopt the language and process. It was confusing. It was time consuming. And the Agile misconception that “prototyping = rapid development” just piled tech debt higher and faster.
+## Why another book?
 
-So I started experimenting. Story maps worked for a while - they gave the business something to visualize and talk about - but they didn’t have enough structure. People get lost in endless options without a framework to guide them. Over time I collected a grab-bag of tools, tricks, and half-frameworks that solved real problems. I wore every hat - dev, DBA, architect, BA, product owner, mad scientist - and every role left me with another bit of the puzzle.
+I’ve spent 30 years building software — wearing every hat from developer to DBA to product owner. I’ve seen Agile sprints devolve into ticket shuffles, Scrum ceremonies turn into theater, and DDD grind to a halt in translation debates. I loved the ideas, but in practice they were either too heavy, too vague, or too fragile.
 
-Those bits stuck. I still hear from people who use tools I built more than a decade ago. And when my current job gave me the freedom to stitch it all together into a single framework and test it with a small team, the feedback was jaw-dropping. Within days the team was shipping cleaner, faster, and with less stress.
+So I built something different: **Feedback Loops.**
 
-I’ve been using the prompts that underpin PDD for weeks now, and the results are nothing short of  amazing. I built a full feature in 48 hours - from idea to production-ready pull request - with full documentation and polish I’d normally never have time for.
+Feedback Loops are a lightweight, repeatable way to keep business and tech aligned while you ship software that actually solves the right problems. The core is simple: **Baseline → Loop → Canon.** Capture what is, run a thin slice of change, then lock in what worked as the new truth. Repeat until you’re bored of winning.
 
-That’s why I’m writing this book. PDD isn’t theory. It’s the working framework born out of decades of bruises, stitched together in a way real teams can actually adopt and benefit from.
-
----
-
-**Who this book is for**
-If you’re on a small product team, you’ll recognize the chaos: napkin requirements, ops firefights, QA chasing ghosts, devs guessing at business intent. PDD gives you just enough structure to stop the bleeding without slowing you down.
-
-If you’re in a large enterprise, the pain looks fancier - more Jira tickets, more committees, more slide decks - but it’s the same disease. Translation fatigue. Decision ping-pong. Models that look great on paper but collapse in production. PDD scales up because the core loop is the same: feedback, thin slices, and making the good stuff canon.
+And the glue that makes it all practical? **Practical Domain Design (PDD).** These are the artifacts — maps and docs — that capture how the business and the system really work. Not theory. Not a 200-page spec. Just enough clarity to keep everyone on the same page.
 
 ---
 
-**What this book will teach you**
-Here’s the journey we’ll take together:
+## Who this book is NOT for
 
-1. **Spot the real problem.** Why traditional methods like DDD and “Agile Theater” break down in practice.
-2. **Meet PDD.** The principles and promises that make it work.
-3. **Build your baseline.** A simple way to capture where you are today before you try to fix it.
-4. **Run the loop.** The feedback cycle that drives learning and prevents late-night disasters.
-5. **Make it canon.** How to promote lessons from the loop into your new source of truth.
-6. **Keep it alive.** How to deal with drift, growth, and the messy reality of shipping software.
+This isn’t a Software Development 101 or Project Management 101 book. If you’re looking to learn how to code, manage a sprint board, or figure out what a BA or software architect does from scratch — this isn’t it. We assume you’ve been around the block. You already know the basics, the roles, and the lingo.
 
-By the end, you won’t have a binder of theory. You’ll have a handful of living artifacts, a loop your team can actually run, and a way to evolve design without collapsing under it.
+This book is for skimmers and doers. If you need in‑depth explanations of common software concepts, most of what follows will fly right over your head. We won’t hold your hand on fundamentals — we’ll show you how to run Feedback Loops and build Practical Domain Design artifacts that cut through the noise.
 
----
+## Who this book is for
 
-**What next**
-You’ve got two good options from here: dip into the case studies below to see how this stuff plays out in real, funny, and disastrous contexts - or skip ahead to Chapter 2 to start unpacking the problem space. Either way, you’re set up to get the most out of what comes next.
+If you’re on a small product team drowning in chaos — napkin requirements, ops firefights, QA chasing ghosts, devs guessing what the business really wanted — this book will give you structure without the overhead.
+
+If you’re in a large enterprise — with Jira backlogs that groan under their own weight, committees for every decision, and slide decks that say a lot but change little — Feedback Loops scale up. They create traceability from the first pain point all the way to shipped code and back again.
 
 ---
 
-**\[CASE STUDY: TBD - Real]**
-**\[CASE STUDY: TBD - Funny]**
-**\[CASE STUDY: TBD - Disaster]**
+## What this book will teach you
+
+We’ll walk step by step through:
+
+1. **Spotting the real problem.** Why traditional methods collapse in practice.
+2. **Learning the Feedback Loop pattern.** Baseline → Loop → Canon.
+3. **Running the Strategic Loop.** Capturing pain points, validating problems, framing vision, and producing a PRD plus business-facing Practical Domain Design.
+4. **Running the Tactical Loop.** Translating PRDs into technical design, code, and technical-facing PDD artifacts.
+5. **Making it Canon.** How to lock in what worked as the new shared truth.
+6. **Keeping it alive.** How to handle drift, growth, and the messy reality of shipping software.
+
+By the end, you won’t have a binder of theory. You’ll have a handful of living artifacts, a loop your team can actually run, and a way to evolve design without burning out.
 
 ---
 
-👉 In short: PDD is the antidote to design theater. Whether you’re a five-person startup or a Fortune 500 death-by-committee machine, the principles are the same: feedback beats foresight, thin slices win, and what works becomes canon.
+## What next
+
+You can dip into the case studies to see how this plays out in real, funny, and sometimes disastrous situations. Or you can skip ahead to Part 1, where we unpack why popular methodologies trip teams up and how Feedback Loops fix the gaps.
+
+Either way, you’ll be ready to see how this system keeps both business and tech honest, aligned, and moving forward.
 
 ---
 
-## 📖 Part 1 - Introduction/0.2.why-popular-methodolies-trip-up-teams.md
-
-# Chapter 2: Why Popular Methodologies Trip Up Teams
-
-Software design has been through a parade of “big answers.” Waterfall, Agile, Scrum, Domain-Driven Design (DDD), SAFe, LeSS, and countless hybrids with shinier logos. Each came with the promise: *follow these steps and your team will deliver better software, faster, with less pain.*
-
-The problem? Most of these methods look great in books and slide decks, but in practice, teams end up tripping over the same cracks. Some approaches are too rigid. Some are too heavy. Others are elegant in theory but demand a learning curve so steep you need climbing gear.
-
-PDD isn’t here to throw out everything that came before. It borrows the best pieces. But it also admits what hasn’t worked in the real world - especially for small teams without a stadium full of coaches and consultants.
+👉 In short: This isn’t another process fad. **Feedback Loops are the engine. Practical Domain Design is the map. Together they make shipping software sane again.**
 
 ---
 
-## a. The Waterfall Mirage
+## 📖 Part 1 - The Problem & The Fix/1.2.why-popular-methodologies-trip-us-up.md
 
-Waterfall promised clarity: gather all the requirements up front, design once, build once, and roll it out like a factory product.
+# Chapter 1.2: Why Popular Methodologies Trip Us Up
 
-In practice? Businesses change their mind faster than you can finish a Gantt chart. By the time the last phase is done, the requirements are already out of date. The team ships exactly what was asked for six months ago - and exactly what no one wants today.
+Every shiny methodology promises to save us from chaos. Waterfall promised predictability. Agile promised speed. Scrum promised teamwork. DDD promised clarity. And yet, here we are in 2025 — still drowning in rework, mistranslation, and late-night fire drills.
 
----
+The problem isn’t that these approaches are *wrong*. It’s that they assume conditions that almost never exist in real life: clear requirements, stable goals, and teams who magically speak the same language. When reality doesn’t match the theory, teams stumble into the same traps over and over.
 
-## b. Agile & Scrum Fatigue
-
-Agile started as a rebellion against Waterfall’s rigidity. Scrum gave it structure: sprints, backlogs, standups. At first, it was liberating.
-
-But without discipline, teams drift into **Agile Theater**:
-
-* Standups become status recitals.
-* Sprint reviews are awkward half-demos.
-* Backlogs balloon into junk drawers.
-
-Instead of speed and collaboration, you get ritual without results. Scrum isn’t broken - but applied mechanically, it wears teams down.
+Let’s break it down.
 
 ---
 
-## c. DDD’s Steep Hill
+## 1.2.1 Waterfall Woes
 
-Domain-Driven Design was revolutionary when it landed in 2003. It gave developers a way to model messy business problems in code. For practitioners, the artifacts are gold.
+Waterfall works when you’re building a bridge. You know the river won’t move halfway through construction. Software? Not so much.
 
-The catch? The learning curve. Getting non-developers to adopt the language and process often stalls out. Ubiquitous language sounds great until Sales, Support, and Finance are stuck in a three-hour debate about whether it’s a *customer* or a *client.*
+The idea: gather all the requirements upfront, design it all, build it, test it, ship it. Neat, linear, controlled.
 
-DDD isn’t wrong. It was just early. And without simplification, it’s a barrier for teams trying to move fast.
-
----
-
-## d. Framework Inflation
-
-Every few years, a new acronym promises to scale Agile: SAFe, LeSS, Spotify model. These frameworks often solve problems for huge enterprises - but bring overhead most small teams can’t sustain. Suddenly you’re spending more time updating artifacts for the framework than solving real business problems.
+The reality: by the time you deliver, the business has changed, the users want something else, and your beautiful plan is already obsolete. Feedback arrives only at the very end, when it’s most expensive to act on. That “predictability” comes at the cost of massive waste.
 
 ---
 
-## What these all have in common
+## 1.2.2 Agile & Scrum Theater
 
-* They start with **good intentions.**
-* They deliver **value for some teams.**
-* But when adopted blindly, they create as much pain as they solve.
+Agile started as a manifesto with values we all agree on. But somewhere along the way, it became cargo cult. Teams measure “velocity” like it’s a blood pressure reading, hold standups that are just status recitals, and run sprint reviews where half the features demoed don’t even matter.
 
-Rigid plans collapse when the business shifts. Rituals drift into theater. Elegant ideas stall out under their own weight.
+Scrum made it worse by scripting ceremonies into rigid theater:
 
----
+* Standups: everyone reports what they did, nobody collaborates.
+* Sprint reviews: awkward half-demos to polite applause.
+* Retros: gripe sessions with no follow-through.
 
-## Where PDD fits
-
-Practical Domain Design isn’t a “replacement religion.” It’s a pragmatic evolution:
-
-* **From DDD:** it keeps the clarity of modeling the domain - without the linguistic dogma.
-* **From Agile/Scrum:** it keeps the feedback loops and thin slices - without the theater.
-* **With Waterfall:** it can even fit, by using baselines and loops to reduce risk in staged delivery.
-
-The core idea: **feedback beats foresight, thin slices win, and what works becomes canon.**
-
-That makes PDD lightweight enough for a five-person startup, but structured enough to give a 5000-person enterprise real alignment.
+The backlog bloats, the ceremonies keep rolling, and actual alignment fades. You’re agile in name, but in practice it’s theater.
 
 ---
 
-👉 **In short:** Every methodology promised to fix the chaos. Most delivered value - and headaches. PDD builds on what worked, ditches what didn’t, and gives you a loop you can actually run without a playbook the size of a dictionary.
+## 1.2.3 DDD: Great in Theory, Hard in Practice
+
+Domain-Driven Design was a leap forward. Finally, a way to make the business and devs talk about the same problems. The artifacts are genuinely useful for developers.
+
+But adoption is brutal. The learning curve is steep, the diagrams are intimidating, and the “ubiquitous language” idea turns into endless arguments about whether to call it a customer, client, or account. Translation debt piles up faster than tech debt.
+
+DDD shines in greenfield projects with time to spare. In messy, fast-moving environments, it often collapses under its own weight.
 
 ---
 
-## 📖 Part 1 - Introduction/0.3.the-practical-domain-design-fix.md
+## 1.2.4 The Common Pitfalls Across All
 
-# Chapter 3: The Practical Domain Design Fix
+Different methods, same problems:
 
-So if Waterfall, Agile, Scrum, and DDD each had their strengths, why do teams still keep tripping on them? Because most of these methods are used like it’s still the era they were born in. Waterfall assumed stable requirements. Agile assumed small, co-located teams. DDD assumed monoliths and long release cycles. The world has changed - APIs everywhere, cloud sprawl, remote everything, and a constant stream of alerts that hit at 2 a.m. Trying to use those methods unmodified today is like trying to run modern apps on a Windows 95 box. They might boot, but the fit is clunky.
+* **Translation fatigue** – Business says one thing, tech hears another, and everyone nods while building the wrong thing.
+* **Decision ping-pong** – Choices bounce between teams until deadlines make them for us.
+* **Lack of traceability** – No clean line from pain point → requirement → code.
+* **Ceremony over outcomes** – More focus on rituals than results.
 
-That’s where **Practical Domain Design (PDD)** comes in.
-
----
-
-## a. Core Idea: Two Worlds, One Map
-
-Instead of forcing everyone into the same vocabulary or rigid process, PDD accepts reality: business and tech will always speak different dialects.
-
-* Business talks in **departments, workflows, operations, and entities.**
-* Devs talk in **modules, actions, services, and models.**
-
-Neither side has to fake fluency. The bridge is a **translation map** that connects the two. It’s lightweight, visual, and keeps both sides honest.
-
-👉 Think of it like subtitles on a movie. You don’t need the actors to change their lines, you just need a reliable translation so everyone follows the same plot.
+Sound familiar? That’s because the root problem is the same: we keep treating design as a one-time event instead of a continuous process.
 
 ---
 
-## b. How PDD Solves the Old Problems
+## 1.2.5 What We Actually Need
 
-* **Waterfall’s rigidity** → PDD replaces one giant bet with thin slices and feedback loops. You still get structure, but you’re not locked into a six‑month death march.
-* **Agile/Scrum fatigue** → PDD keeps the good parts (short cycles, collaboration) but trims the theater. No rituals for their own sake - only the loop that proves learning.
-* **DDD’s steep hill** → PDD lowers the barrier. Instead of demanding one “ubiquitous language,” it gives each side its own baseline and ties them together with a map.
-* **Framework inflation (SAFe, LeSS, etc.)** → PDD scales up without drowning in overhead. Strategic artifacts work for a 5‑person team and still make sense in a 5000‑person enterprise.
+What teams actually need isn’t another methodology layered on top. We need:
 
-PDD doesn’t fight these methods - it plays nice with them. Want to run Scrum? Great, let PDD’s baselines feed your backlog. Stuck in a Waterfall shop? Use PDD’s loop to reduce risk between stages. Love DDD? Keep the modeling discipline, just ditch the vocabulary wars.
+* A **lightweight, repeatable system** that doesn’t collapse under real-world chaos.
+* A way to **connect business and tech** without forcing them to speak the same language.
+* A rhythm that works for both **startups** (fast, messy) and **enterprises** (big, political).
 
----
+In other words: we need **Feedback Loops.**
 
-## c. Strategic vs Tactical
+Feedback Loops don’t throw out Agile, Scrum, or DDD. They modernize them. They give teams a pattern that works even when the ground shifts under their feet.
 
-Classic methods often blur business intent and technical detail. PDD draws a hard line:
-
-* **Strategic Baseline (business reality):** How the business actually runs today - departments, workflows, ops, and entities.
-* **Tactical Baseline (code reality):** How the system actually behaves today - modules, actions, services, and models.
-
-Side by side, the gaps and misalignments are impossible to ignore. That clarity is what fuels better decisions.
+That’s where we go next.
 
 ---
 
-## d. The Loop as Connective Tissue
+## 📖 Part 1 - The Problem & The Fix/1.3.the-feedback-loops-fix.md
 
-The real magic isn’t just the baselines - it’s the **Loop.**
+# Chapter 1.3 The Feedback Loops Fix
 
-Every time a new pain point or idea shows up, it runs through the same cycle:
+So if Agile, Scrum, DDD, and all the rest aren’t *wrong*, why do so many teams still crash and burn when they follow them? Because they’re optimized for theory, not today’s reality. Most frameworks assume clean backlogs, neat handoffs, and stakeholders who magically speak the same language. That’s not how real teams live.
 
-1. Capture it in **business terms** (strategic).
-2. Translate it into **technical terms** (tactical).
-3. Implement, validate, and demo it back in both languages.
+Reality check: today’s teams are juggling remote work, cloud services, spaghetti legacy systems, and business expectations that change by the week. You don’t need more ceremony. You need a system that keeps everyone aligned even when the ground shifts under your feet.
 
-No endless debates. No ceremony creep. Just a repeatable loop that keeps everyone aligned while the system evolves.
+That’s where **Feedback Loops** come in.
 
 ---
 
-👉 **In short:** Practical Domain Design doesn’t throw out old methods - it modernizes them. Structure without rigidity. Feedback without theater. Translation without language coups. Two worlds, one map, continuous loops. That’s the fix.
+## a. Core Idea: Loops, Not Linear
+
+Instead of one-and-done handoffs, Feedback Loops treat design as an ongoing cycle. Each loop is a self-contained engine:
+
+1. **Baseline** – Capture the current state.
+2. **Loop** – Run thin-slice experiments from pain point → solution.
+3. **Canon** – Lock in what worked as the new truth.
+
+Then repeat. Over and over. The rhythm creates alignment without endless meetings.
+
+👉 Think of it like muscle memory. The more loops you run, the stronger and faster your team gets.
 
 ---
 
-## 📖 Part 1 - Introduction/0.4.getting-started-with-pdd.md
+## b. Two Worlds, Same Pattern
 
-# Chapter 4: Getting Started with PDD
+We run **two loops in parallel**:
 
-Okay, enough theory. Let’s talk about what you actually need to get PDD off the ground. Spoiler: you don’t need a six-figure consulting engagement or a 300-page training manual. You need a couple of roles, a clear sense of your situation, and the discipline to keep the loop running. That’s it.
+* **Strategic Loop (Business)** – Captures departments, workflows, operations, and business entities. Produces PRDs and business-facing Practical Domain Design maps.
+* **Tactical Loop (Tech)** – Captures modules, actions, services, and models. Consumes PRDs + business maps, then produces code, technical maps, and docs.
 
----
-
-## a. Minimum Setup
-
-The beauty of PDD is that it’s **lightweight on purpose.** You don’t need to reorganize the company or buy fancy tools. You can start with:
-
-- A shared doc or whiteboard tool (Notion, Miro, Google Docs - doesn’t matter).
-- Your existing backlog system (Jira, Trello, sticky notes on the wall).
-- A team willing to spend 1–2 hours mapping how things *actually* work.
-
-If you’ve got those, you can start. No excuses.
+Both use the same pattern: Baseline → Loop → Canon. The outputs of one feed the other. Strategic defines the *what* and *where it fits*. Tactical defines the *how*. Together, they keep business and tech in sync without pretending they speak the same language.
 
 ---
 
-## b. Roles (aka Hats People Already Wear)
+## c. Why Feedback Loops Beat Theater
 
-PDD doesn’t require you to invent fancy new job titles. You already have these roles on your team - we’re just shining a light on the hats they need to wear inside the loop.
+Other frameworks collapse at the handoff:
 
-- **Business Mapper**: This is your BA, Product Owner, or whoever actually knows how the business runs (warts and all). Their job in PDD is to capture workflows and entities in plain language, not corporate poetry.
-- **Tech Mapper**: Usually a lead dev or senior engineer. They know where the codebase’s bodies are buried and can map modules, services, and models without hand-waving.
-- **Loop Facilitator**: Think “Scrum Master without the burn-down chart fetish.” Their job is to keep the cycle moving, make sure business and tech maps stay aligned, and call BS when people start drifting into Agile Theater. On small teams, this can rotate or just fall to whoever’s best at herding cats.
+* Agile devolves into ticket-shuffling.
+* Scrum becomes sprint ceremonies with no heartbeat.
+* DDD stalls in translation fights over terminology.
 
-👉 The point isn’t new titles. The point is coverage. If no one is wearing a hat, that perspective gets ignored - and your loop collapses.
+Feedback Loops solve this by:
 
----
-
-## c. PDD Situations
-
-Before you dive into mapping, figure out which **situation** your team is in. PDD flexes to fit, but the starting point changes:
-
-### 1. Existing Business + Existing Software
-
-*Example: A SaaS company that’s been live for 5 years. Customers are happy enough, but the codebase has grown into a patchwork quilt. You need to document what you have and improve it without blowing everything up.*
-
-- **Strategic:** Baseline + Loop → Canon
-- **Tactical:** Baseline + Loop → Canon
-  👉 Document what exists (warts and all), then improve it incrementally.
-  *Remodeling the house while you still live in it.*
+* Making translation explicit through **Practical Domain Design artifacts** (business maps + technical maps).
+* Building traceability: every line of code can be traced back to an original pain point.
+* Keeping alignment alive: each Canon update refreshes both sides.
 
 ---
 
-### 2. Green Field (New Business + New Software)
+## d. In Short
 
-*Example: Two founders with an idea for a marketplace app. No existing business processes, no codebase. You’re starting from zero.*
+Feedback Loops don’t replace Agile, Scrum, or DDD. They modernize them. They’re the glue that keeps strategy and tactics connected, so teams can adapt quickly *without* losing alignment.
 
-- **Strategic:** Loop → Canon
-- **Tactical:** Loop → Canon
-  👉 No baseline exists. The loop is both discovery and design.
-  *Building on an empty lot.*
+* Strategic Loop = design the business.
+* Tactical Loop = design the system.
+* Canon = the shared, living truth.
 
----
-
-### 3. Existing Business + New Software (no pre-existing software)
-
-*Example: A manufacturer that’s been tracking orders with spreadsheets and email threads. The business is humming, but now they want to build their first internal system.*
-
-- **Strategic:** Baseline + Loop → Canon
-- **Tactical:** Loop → Canon
-  👉 Document the business, then treat the software side as green field.
-  *Like digitizing a company that’s been running on paper binders.*
+That’s the fix: **loops instead of theater, artifacts instead of guesses, and alignment that sticks.**
 
 ---
 
-### 4. Existing Business + Re-write of Existing Software
+## 📖 Part 1 - The Problem & The Fix/1.4.practical-domain-design.md
 
-*Example: A retailer stuck with a 15-year-old ERP system that crashes weekly and can’t keep up with new sales channels. It’s too brittle to patch anymore, so the only real option is a rebuild.*
+# Chapter 4: Practical Domain Design
 
-- **Strategic:** Baseline + Loop → Canon
-- **Tactical:** **Condensed Baseline (reference only)** + Loop → Canon
-  👉 Capture the legacy system only as a **reference** to avoid repeating its mistakes. Build fresh tactical canon through the loop.
-  *Tearing down a moldy house. Keep the inspection report, but don’t reuse the foundation.*
+Feedback Loops are the engine. But an engine without wheels doesn’t get you far. That’s where **Practical Domain Design (PDD)** comes in. These are the artifacts — the maps and documents — that give shape to the loops. They’re lightweight enough for small teams, structured enough for big enterprises, and always traceable back to the original pain point.
 
----
-
-### Decision Checklist
-
-Not sure which path you’re in? Use this quick guide:
-
-* If you’ve got **business + software in production**, you’re in **Situation 1**.
-* If you’ve got **no business and no software**, you’re in **Situation 2**.
-* If you’ve got **business but no software yet**, you’re in **Situation 3**.
-* If you’ve got **business + terrible software you need to replace**, you’re in **Situation 4**.
-
-👉 When in doubt, pick the one that feels least optimistic. PDD works best when you face the messy reality head-on.
+Without artifacts, loops are just meetings. With artifacts, loops create a living body of truth everyone can see, use, and trust.
 
 ---
 
-## Why This Matters
+## a. Why Artifacts Matter
 
-Most teams fail because they start too heavy. They try to roll out DDD workshops, big design sessions, or enterprise tooling before they’ve even proven the basics. PDD flips that: start minimal, keep artifacts tight, and let the loop prove its value.
+Most teams don’t fail because they lack ideas. They fail because ideas get lost in translation:
 
-In short: PDD doesn’t need a reorg. It just needs a map, a loop, and a team that agrees to keep it honest.
+* Business says one thing, devs hear another.
+* QA tests the wrong acceptance criteria.
+* Ops inherits a feature no one explained.
 
----
+Artifacts fix that. They:
 
-## 📖 Part 2 - Strategic Domain Design/2.0.0.strategic-domain-design-overview.md
+* **Anchor conversations** in shared documents, not opinions.
+* **Create traceability** from pain point → PRD → code.
+* **Prevent rework** by forcing clarity early, when it’s cheap.
 
-# 📘 Chapter 2.0.0: Strategic Domain Design Overview
-
-**Why strategy matters**
-Software doesn’t fail because of code alone. It fails because of bad bets, muddled decisions, and feedback that never makes it to the people who can act on it. Strategic Domain Design is where PDD starts - it’s the layer that tells the business: *what’s the core business problem, how is it hurting us today, and what does an acceptable solution actually look like?*
-
-If you skip strategy, you end up playing whack-a-mole with symptoms. Teams argue over architecture while the business quietly drifts off-course.
-
----
-
-**The problem at the business layer**
-Most organizations struggle with three things:
-
-1. **Translation fatigue** - endless back-and-forth between business and tech creates lag and confusion.
-2. **Decision ping-pong** - ownership is unclear, so choices bounce around until deadlines make the decision for you.
-3. **Theater over truth** - slide decks and process rituals look good, but the real pain (risk, waste, late nights) is hidden.
-
-Without a clear strategic frame, tactical excellence is wasted effort. You can invest in the slickest tools and the most polished reports and still back the wrong bet. PDD isn’t just about better delivery - it’s a process for improving how the business itself thinks, decides, and learns.
+👉 In short: artifacts are the receipts. They prove why you built what you built, and how it ties back to real business problems.
 
 ---
 
-**What Strategic PDD gives you**
-Practical Domain Design at the strategic level delivers three outcomes:
+## b. PDD in the Strategic Loop
 
-* **Clarity of bets** - a lightweight product brief that says what we’re trying to achieve and why it matters.
-* **Explicit decision rights** - every decision has an owner, inputs, and a timebox. No more endless debates.
-* **A living loop** - feedback from users, delivery, and risk gets inspected, and the plan actually changes.
+On the business side, loops generate these artifacts:
 
-Think of it as business guardrails. Not process for process’ sake, but a system that keeps decisions visible, accountable, and adaptable.
+* **Business Pain Point Entry (PPE)** – Catch the smoke early.
+* **Problem Validation Brief (PVB)** – Prove the fire is real.
+* **Vision & Problem Statement (VPS)** – Paint the better world.
+* **Requirements Brief (RB)** – Define what must be true.
+* **Product Requirements Document (PRD)** – Package the bet we’re making.
+* **Business Map (Strategic PDD)** – Place the solution in context: departments → workflows → operations → entities.
 
----
-
-**Artifacts that matter**
-Strategy isn’t about piles of documents. It’s about a few living artifacts that steer the ship:
-
-* **Business Pain Point** - the raw issue we need to solve.
-* **Problem Validation Brief** - evidence that the pain is real and worth fixing.
-* **Vision & Problem Statement** - the north star and the context around it.
-* **Requirements Brief** - the key needs we must address without drowning in detail.
-* **Product Requirements Document (PRD)** - a structured record of what we’re committing to build.
-
-If an artifact doesn’t directly improve clarity, speed, or safety, it’s baggage.
+This last step is critical. The PRD describes the solution in isolation. The Business Map shows where it fits in the larger system and exposes potential conflicts before they reach code.
 
 ---
 
-**Why it matters to the business**
-Skip Strategic PDD and you leave product direction to inertia, the loudest voice, or the prettiest slide deck. Use it, and you get a loop where feedback actually alters course, decisions stick, and your team can focus on execution without burning weekends.
+## c. PDD in the Tactical Loop
 
-This chapter is the bridge: once you understand the business frame, the tactical chapters will show you exactly how to enforce it in code, tests, and releases.
+On the tech side, loops consume the Strategic artifacts and produce Tactical ones:
 
----
+* **Inputs:** PRD + Business Map.
+* **Outputs:**
 
-👉 In short: Strategic Domain Design is the part of PDD that keeps the business honest. It’s not more meetings - it’s a way to make sure your team’s energy goes into bets that matter, decisions that stick, and feedback that changes the plan.
+  * **Technical Map (Tactical PDD)** – Modules → Actions → Services → Models.
+  * **Code** – The working system that meets the business need.
 
----
+Example:
 
-## 📖 Part 2 - Strategic Domain Design/2.1.0.strategic-domain-design-baseline.md
+* Business Map: *Workflow → Manage Teams; Operation → Team.addCoach; Entity → Team.*
+* Technical Map: *Module → Team; Action → ManageTeam; Service.Function → TeamService.addCoach(); Model → Team.*
 
-# 📘 Chapter 2.1.0: Strategic Domain Design - Baseline
-
-**Why you need a baseline**
-Before you start changing anything, you need to see the mess as it really is. Most teams blow past this step because it feels slow or boring. But if you don’t freeze a snapshot of your current reality, you’ll never know what actually improved - you’ll just be swapping one flavor of chaos for another.
-
-Think of it like renovating a house: you take “before” photos not because they’re pretty, but because later they prove all the sweat was worth it.
+The mirroring makes traceability automatic. Business designs in their terms, tech implements in theirs, and the maps line up without forcing a “ubiquitous language” nobody actually uses.
 
 ---
 
-**What a baseline gives you**
-The baseline captures the business problems and decisions in flight right now. Done right, it gives you:
+## d. The Symmetry
 
-* **A common reference point** - everyone agrees on “this is where we are.”
-* **A safe starting line** - you can experiment without losing track of the original problem.
-* **Evidence for improvement** - proof that the loop is actually paying off.
+Strategic and Tactical PDD artifacts are mirrors:
 
----
+* **Department ↔ Domain/Module**
+* **Workflow ↔ Action**
+* **Operation ↔ Service.Function**
+* **Entity ↔ Model**
 
-**How to build your baseline**
-You don’t need a six-month discovery crusade. You just need to answer a few blunt questions and capture them in living artifacts:
-
-* **Business Pain Point** - What’s the real hurt? Phrase it in plain English.
-* **Problem Validation Brief** - How do we know this hurt is real and worth fixing?
-* **Vision & Problem Statement** - Where are we trying to go, and why?
-* **Requirements Brief** - What’s essential to fix, without boiling the ocean?
-* **Product Requirements Document (PRD)** - The first structured record of the bet we’re making.
-
-If your team can crank out a single page for each, congratulations: you’ve got a baseline.
+This symmetry is what makes PDD powerful. It lets each side work in their own language while keeping the maps aligned. Every pain point can be traced all the way to a line of code, and every line of code can be traced back to a business problem.
 
 ---
 
-**Pitfalls to avoid**
+## e. In Short
 
-* Don’t turn this into a months-long discovery marathon. The point is speed, not perfection.
-* Don’t let artifacts rot on a shelf. If nobody updates them, they’re just paperwork.
-* Don’t skip validation. If you can’t prove the pain is real, you’re solving the wrong problem.
+Feedback Loops keep the system moving. **Practical Domain Design provides the map.** Together they:
 
----
+* Keep business and tech aligned without forcing them to fake fluency.
+* Prevent “lost in translation” disasters.
+* Ensure every solution fits both the business context and the codebase.
 
-**What next**
-
-**Learn How It Works**
-Start with the Practical Strategic Domain Design core concepts. That’s the playbook that explains why this isn’t just more paperwork and how it ties your business together.
-
-**Learn How To Do It**
-Crack open the SOP. Think of it as the recipe card: step-by-step, no fluff, just what you need to get cooking.
-
-**Choose Your Own Adventure**
-Now pick your weapon. Want the full hands-on experience? Go manual and grind it out with your team. Prefer speed and less grunt work? Let AI do the heavy lifting. Same baseline, different flavor of shortcut.
+👉 Loops are motion. PDD is structure. That’s how you ship features that work, make sense, and don’t torch your weekends.
 
 ---
 
-👉 In short: The baseline isn’t busywork - it’s the “before photo” that makes progress visible. Skip it, and you’re just running in circles and calling it strategy.
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.0.0.strategic-feedback-loop-overview.md
+
+# Chapter 2.0.0 Strategic Feedback Loop Overview
+
+The **Strategic Feedback Loop** is where business reality gets captured, tested, and translated into living artifacts. It’s not about wishful thinking or future-state diagrams. It’s about running a repeatable cycle that turns raw pain points into validated business designs everyone can agree on.
+
+The pattern is the same as every loop in this book: **Baseline → Loop → Canon.**
 
 ---
 
-## 📖 Part 2 - Strategic Domain Design/2.1.1.concept-establish-the-strategic-baseline.md
+## Purpose
 
-# Chapter 2.1.1 Concept: Establish The Strategic Baseline - Documenting the Business
+The Strategic Loop gives the business side of the house a clear rhythm:
 
-Every team thinks they know how their business runs… until they try to write it down. Suddenly the “simple” billing process has six secret detours, and Support’s “standard” workflow turns out to be fifty shades of chaos.
+* **Baseline:** Capture how the business *actually* runs today (departments, workflows, operations, entities).
+* **Loop:** Take new pain points, validate them, shape vision, define requirements, and produce a PRD plus a Strategic PDD (Business Map).
+* **Canon:** Lock in what worked as the new shared truth, so the next loop starts from reality, not fiction.
 
-That’s why we start PDD with the **Baseline**. This is not about fixing anything. It’s not about debating best practices. It’s about taking a clean snapshot of how the business actually operates today - warts, duct tape, and all.
+This isn’t BA theater. It’s structured momentum. Each cycle creates artifacts that are small, lightweight, and traceable all the way to tactical work.
 
-Think of it like a map: you can’t plan a road trip until you know where you’re starting. The Baseline is that starting point.
+---
+
+## Burning Questions It Answers
+
+* How do we capture what’s really happening in the business without drowning in documentation?
+* How do we know which problems are real and worth solving?
+* How do we ensure the “fix” fits into the bigger business picture?
+* How do we keep everyone aligned as the business evolves?
+
+---
+
+## Why It Matters
+
+Most teams either under-document (chaos) or over-document (paralysis). The Strategic Loop threads the needle: just enough structure to prevent waste, but not so much that you spend all day making diagrams nobody reads.
+
+It also creates **traceability**:
+
+* Pain Point → Validation → Vision → Requirements → PRD → Strategic Domain Design → Canon.
+
+That chain of custody means when someone asks “why are we building this?” you don’t shrug — you point straight to the artifact trail.
+
+---
+
+## In Short
+
+The Strategic Feedback Loop is the business engine of PDD. It keeps pain points from getting lost, turns ideas into validated requirements, and maps them into the business context before anything ever hits code. It’s how business stops lobbing requests over the wall and starts co-owning the design of the system.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.1.0.strategic-baseline.md
+
+# Chapter 2.1.0 Strategic Baseline Overview
+
+Every loop starts with a **Baseline**. For the Strategic Loop, that means capturing how the business really works today — not the glossy slide deck version, not the wishful-thinking version, but the messy, duct-taped, real-world version.
+
+Think of the Baseline as your starting map. You can’t plan a road trip if you don’t know where you’re starting. The Strategic Baseline is that “you are here” marker.
+
+---
+
+## Purpose
+
+The Strategic Baseline provides a shared snapshot of business reality:
+
+* **Departments** – The big buckets of responsibility.
+* **Workflows** – The repeatable processes those departments run.
+* **Operations** – The atomic steps inside workflows.
+* **Entities** – The nouns the business cares about (customers, invoices, tickets, etc.).
+
+It’s not about fixing anything yet. It’s about agreeing on the current state so you have a foundation to build from.
+
+---
+
+## Burning Questions It Answers
+
+* What are the major departments we rely on?
+* What workflows actually happen day to day?
+* What operations make those workflows run?
+* What business entities do we touch across teams?
+
+---
+
+## Why It Matters
+
+Without a baseline, every conversation becomes a game of telephone. Marketing swears support “always” drops tickets, support says billing is the bottleneck, billing blames sales. Nobody has the same picture.
+
+The Strategic Baseline kills the guessing game. It makes the invisible visible. Once it’s documented, you can:
+
+* Spot overlaps and conflicts across departments.
+* Onboard new people without 3 weeks of tribal-knowledge download.
+* Build traceability into future loops.
+
+👉 It’s the difference between arguing about what’s true and agreeing on what’s real.
+
+---
+
+## In Short
+
+The Strategic Baseline is your starting map. It doesn’t solve problems — it shows you where you actually are. And without it, every loop risks starting from fantasy instead of reality.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.1.1.concept-establish-the-strategic-baseline.md
+
+# Chapter 2.1.1 Strategic Baseline – Documenting the Business
+
+Every team thinks they know how their business runs… until they try to write it down. Suddenly the “simple” billing process has six hidden detours, and Support’s “standard” workflow turns out to be fifty shades of chaos.
+
+That’s why every **Strategic Feedback Loop** starts with a **Baseline**. This isn’t about fixing anything or debating best practices. It’s about taking a snapshot of how the business actually operates today — warts, duct tape, and all.
+
+Think of it like a map: you can’t plan a road trip until you know where you’re starting. The Baseline is that “you are here” marker.
 
 ---
 
 ## The Four Building Blocks
 
-When documenting the business, we care about four simple pieces:
+When documenting the business, capture four simple pieces:
 
-1. **Departments** – The big buckets of responsibility.
-2. **Workflows** – The repeatable processes each department runs.
-3. **Operations** – The tasks inside each workflow.
-4. **Entities** – The nouns the business deals with every day.
+* **Departments** – Big buckets of responsibility.
+* **Workflows** – The repeatable processes those departments run.
+* **Operations** – The atomic steps inside each workflow.
+* **Entities** – The nouns the business deals with every day.
 
-That’s it. No fancy jargon or synergistic buzzwords. Just business terms people already use.
-
----
-
-### 1. Departments
-
-Departments are the easiest place to start. If the company cuts paychecks for it, it’s a department.
-
-* Sales
-* Billing
-* Support
-* HR
-* Operations
-
-👉 Write them down as a list. Don’t argue about org charts or reporting lines. We just want the functional buckets of work.
-
----
-
-### 2. Workflows
-
-Workflows are the **repeatable processes** a department runs. Each workflow has a clear start, a series of operations, and an end.
-
-Think of a workflow as a **story**: *When X happens, we do Y, which results in Z.*
-
-Examples (Billing Department):
-
-* **Generate Invoice** → (operations: `Invoice.create`, `Invoice.send`)
-* **Handle Dispute** → (operations: `Dispute.open`, `Dispute.resolve`)
-* **Send Payment Reminder** → (operations: `Reminder.create`, `Reminder.send`)
-
-👉 If you can’t describe it as “When this event happens, we perform these steps to get to an outcome,” it’s not a workflow.
-
-Workflows are the backbone of the Strategic Baseline. Later, when we connect them to the Tactical Baseline, you’ll see how each workflow coordinates a set of operations inside the code.
-
----
-
-### 3. Operations
-
-Operations are the **atomic steps** inside a workflow. Each one is a single action taken against a business entity. They should be short, concrete, and verb-heavy.
-
-Examples:
-
-* `Team.updateName`
-* `Invite.create`
-* `Season.changeRegistrationCloseDate`
-
-👉 If an “operation” takes multiple checks, approvals, or branches, it’s not an operation - it’s a workflow.
-
-Operations are where the business world starts to line up with the technical world. In the Tactical Baseline, these will map to **Business Entity Services** - e.g. “Update Team Name” becomes `TeamService.updateName()`.
-
----
-
-### 4. Entities
-
-Entities are the nouns your team touches. Customers, Invoices, Products, Tickets, Orders.
-
-**Example (Billing Entities):**
-
-* Customer Account
-* Invoice
-* Payment Method
-
-Entities often cross department lines. That’s a good thing. Later, when we compare the business baseline with the code baseline, those overlaps will expose gaps and misalignments.
+That’s it. No buzzwords. Just the terms people already use.
 
 ---
 
 ## Artifacts
 
-PDD gives you a structured framework with the flexibility to use it how you want. Each template plays a role at a different stage of documenting the business:
+Feedback Loops give you structure with flexibility. Each template plays a role at a different stage:
 
-* **🧠 Strategic Baseline - Brain Dump**
-  Use this first. It’s the scratchpad where you capture Departments, Workflows, Operations, and Entities in one messy table. Don’t worry about gaps or duplicates. Just get it out of your head and into Markdown.
+* **🧠 Strategic Baseline – Brain Dump**: Capture Departments, Workflows, Operations, and Entities in one messy table. Don’t worry about gaps. Just dump it.
+* **🏢 Department Detail**: Zoom into each department. Describe what it does, who runs it, and the workflows it owns.
+* **⚙️ Workflow Detail**: For each workflow, nail down the trigger, goal, and step-by-step operations.
 
-* **🏢 Department Detail**
-  Once you’ve got the dump, zoom into each Department. This template helps you describe what the department does, who runs it, and the major workflows it owns. Use it when you want clarity across teams.
-
-* **⚙️ Workflow Detail**
-  For each workflow, break down the trigger, goal, and the step-by-step Operations. This is where you start to see how business steps line up with technical steps. Use it when you need to nail down the exact flow.
-
-👉 Think of it like layers: Brain Dump for breadth, Department Detail for context, Workflow Detail for depth. Pick the layer you need right now. That’s the flexibility of PDD - structured enough to guide you, loose enough to adapt to your team.
+👉 Think of it as layers: Brain Dump for breadth, Department Detail for context, Workflow Detail for depth. Pick the layer you need. That’s the flexibility of PDD — structured enough to guide you, loose enough to adapt.
 
 ---
 
@@ -524,155 +432,130 @@ PDD gives you a structured framework with the flexibility to use it how you want
 You know your baseline is “good enough” when:
 
 * You can show it to a new hire and they nod instead of squinting.
-* No one in the room says “that’s not how we do it.”
-* Aim to keep each department or module baseline on a single screen. If the map sprawls, break it into sub-baselines (e.g. “Billing Baseline,” “Membership Baseline”) instead of one giant hairball.
+* Nobody in the room says “that’s not how we do it.”
+* Each department or module fits on a single screen. If it sprawls, split into sub-baselines instead of one giant hairball.
 
 ---
 
 ## Why It Matters
 
 * **Shared reality:** Everyone stops pretending they know how things work and actually sees it on paper.
-* **Foundation for backlog:** The next step (The Loop) builds on this. You can’t capture pain points if you don’t know the workflows they belong to.
+* **Foundation for backlog:** You can’t capture pain points if you don’t know the workflows they belong to.
 * **Low effort, high return:** Two hours of mapping saves weeks of guesswork later.
 
 ---
 
-👉 In short: The Baseline is just holding up a mirror. Don’t polish it. Don’t overcomplicate it. Just capture what *is*. We’ll worry about fixing things in the Loop.
+👉 In short: The Baseline is just holding up a mirror. Don’t polish it. Don’t overcomplicate it. Just capture what *is*. The fixing comes later, in the Loop.
 
 ---
 
-## 📖 Part 2 - Strategic Domain Design/2.1.2.sop-establish-the-strategic-baseline.md
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.1.2.sop-establish-the-strategic-baseline.md
 
-# Chapter 2.1.2 SOP: Establish The Strategic Baseline - Documenting the Business
+# Chapter 2.1.2 Strategic Baseline – SOP
 
-The Strategic Baseline is where PDD starts. Think of it as building a simple map of how your business really works - not the slide-deck fantasy, not the way leadership *wishes* it ran, but how it actually runs day to day.
+The **Strategic Baseline** is the first step of the Strategic Feedback Loop. Think of it as building a simple map of how your business really works — not the slide-deck fantasy, not the way leadership *wishes* it ran, but the way it actually runs day to day.
 
-This isn’t theory. It’s an SOP you can follow like a recipe. By the end, you’ll have a set of artifacts that make the invisible visible.
+This isn’t theory. It’s an SOP you can follow like a recipe. By the end, you’ll have a set of lightweight artifacts that make the invisible visible.
 
 ---
 
 ## ✅ Quick Checklist
 
-1. Gather the whole team in a room.
-2. Brain dump all departments across the business.
+1. Gather the team in a room (or a shared doc).
+2. Brain dump all departments.
 3. Assign an owner to each department.
 4. Brain dump workflows under each department.
-5. Split into department-level huddles to break workflows into operations and entities.
+5. Split into department huddles to break workflows into operations and entities.
 6. Each team assembles a scratchpad map for its department.
-7. Break for review: department owners present their maps, the group provides feedback.
-8. Collect and refine Department Detail docs for all departments.
+7. Owners present maps, group provides feedback.
+8. Collect and refine Department Detail docs.
 
-That’s it. Now let’s go step-by-step.
+That’s it. One session gets you from fuzzy guesses to a shared Strategic Baseline.
 
 ---
 
-## Step 1 - Brain Dump Departments (and Assign Owners)
+## Step 1 – Brain Dump Departments (and Assign Owners)
 
-* Gather everyone together and list **all departments** in the business.
+* List **all departments** in the business.
 * Ask: “If payroll cuts a check for it, is it a department?”
-* Write down department names (e.g., Billing, Sales, Support).
-* **Assign a business owner** to each department - the person who will take responsibility for the workflows in that department.
-
-**Why this matters:**
-
-* Creates a single point of contact to confirm reality:
-
-  * “Yes, my department does that.”
-  * “No, that belongs to Jane’s team.”
-* Helps the team start visualizing the company as structured roles instead of everyone doing everything.
-* Sets you up for Tactical later when scopes, roles, and permissions come into play.
+* Assign a business owner — not necessarily a manager, but the person who knows the work well enough to own the map.
 
 **Output artifact:** A list of departments with assigned owners.
 
-👉 Pro tip: Don’t get stuck debating org charts. Owners aren’t necessarily managers. They’re the person who knows the work well enough to own the map.
+👉 Don’t debate org charts. Focus on functional buckets of work.
 
 ---
 
-## Step 2 - Brain Dump Workflows
+## Step 2 – Brain Dump Workflows
 
-* For each department, list the repeatable processes it runs.
-* Ask: “When X happens, what do we do that ends with Y outcome?”
-* Keep them short, e.g.:
-
-  * Generate Invoice
-  * Handle Dispute
-  * Send Payment Reminder
+* For each department, list its repeatable processes.
+* Ask: “When X happens, what do we do that results in Y?”
+* Keep it short and high-level.
 
 **Output artifact:** A rough list of workflows under each department.
 
-👉 This is still high-level. Don’t overthink. Capture what people *say* they do. You’ll refine later.
+👉 Capture what people *say* they do. Refinement comes later.
 
 ---
 
-## Step 3 - Department Deep Dive (Operations)
+## Step 3 – Break Workflows into Operations
 
-* Split into department-level huddles (still in the same room).
-* Take the workflow list for your department and break each workflow into **operations**.
-* Each operation = **verb + entity** (e.g., `Invoice.create`, `Dispute.resolve`).
-* Keep it short. If a step has multiple branches or approvals, that’s probably a separate workflow.
+* Split into department huddles.
+* Break each workflow into **operations** (verb + entity, e.g., `Invoice.create`).
+* If it takes branches or approvals, it’s a separate workflow.
 
 **Output artifact:** A short list of operations under each workflow.
 
 ---
 
-## Step 4 - Capture Entities
+## Step 4 – Capture Entities
 
-* Entities are the **nouns** your business touches (Customer, Invoice, Payment Method).
-* Go back through the operations you listed - the nouns are usually right there.
-* Write them down under the department.
+* Entities are the **nouns** your business touches (Customer, Invoice, Ticket).
+* Scan operations for nouns and list them.
+* Note where entities cross department lines — overlaps matter later.
 
-**Output artifact:** A list of entities for that department.
-
-👉 Entities often show up in multiple departments. That’s good - it’ll expose gaps later when you compare baselines.
+**Output artifact:** A list of entities for each department.
 
 ---
 
-## Step 5 - Assemble Scratchpad Maps
+## Step 5 – Assemble Scratchpad Maps
 
-* Each department team assembles its own map: Departments → Workflows → Operations → Entities.
+* Map each department: Departments → Workflows → Operations → Entities.
+* Don’t worry about size or balance.
 
-**Output artifact:** A Strategic Baseline scratchpad map for each department.
+**Output artifact:** A Strategic Baseline scratchpad map per department.
 
-👉 Don’t stress about size. If one department has 138 workflows and another has 3, leave it that way. The number isn’t “wrong” - it’s a clue.
-
-* A huge list might mean the department is overloaded, or it might just mean you’ve defined workflows too narrowly.
-* A tiny list might mean the department is well-bounded, or it might mean you’ve missed detail.
-
-Either way, the map shows you something important about how the business actually functions. That visibility is gold.
+👉 Uneven maps aren’t wrong — they’re clues. Overloaded? Under-defined? Both are signals for future loops.
 
 ---
 
-## Step 6 - Present and Review
+## Step 6 – Present and Review
 
-* Have department owners present their maps while everyone else listens.
-* Encourage questions and clarifications:
+* Department owners present their maps.
+* Group asks: “Does this look real? What’s missing? Who else is impacted?”
+* Capture updates live.
 
-  * “Does this look like reality?”
-  * “What’s missing?”
-  * “Who else is impacted by this?”
-* Capture feedback and update the maps in real time.
-
-**Output artifact:** Department Detail docs for each department, validated by the group.
+**Output artifact:** Validated Department Detail docs.
 
 ---
 
 ### Success Criteria
 
-You know your baseline is ready when:
+Your baseline is ready when:
 
-* A new hire can look at it and nod instead of saying, “That’s not how we do it.”
-* Every department has an owner who can confirm the workflows.
-* The maps may be uneven across departments - and that’s fine. The differences themselves often tell you where to ask better questions later.
+* A new hire nods instead of saying, “That’s not how we do it.”
+* Each department has an owner confirming workflows.
+* Differences across maps point to questions, not confusion.
 
-👉 In short: Don’t trim the map to make it “look nice.” Capture what’s real. Mess, imbalance, and lopsidedness are all useful signals for future backlog items.
+👉 In short: Don’t polish the map to make it pretty. Capture what’s real. Messy beats imaginary every time.
 
 ---
 
-## 📖 Part 2 - Strategic Domain Design/2.1.3.workshop-establish-the-strategic-baseline.md
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.1.3.workshop-establish-the-strategic-baseline.md
 
-# Chapter 2.1.3 Workshop: Establish The Strategic Baseline - Documenting the Business
+# Chapter 2.1.3 Strategic Baseline – Workshop
 
-This isn’t a stiff agenda, it’s a playbook. The goal: get everyone in a room, cut through the fantasy versions of “how we work,” and by lunch you’ll have real artifacts instead of hot air.
+This isn’t a stiff agenda — it’s a playbook. The goal: get everyone in a room, cut through the fantasy versions of “how we work,” and by lunch you’ll have a Strategic Baseline instead of hot air.
 
 ---
 
@@ -680,58 +563,57 @@ This isn’t a stiff agenda, it’s a playbook. The goal: get everyone in a room
 
 * Welcome the group.
 * Explain the goal: *“By lunch, no more mystery workflows hiding under the carpet. We’ll have a map of how this circus really runs.”*
-* Quick overview of the process: Brain dump → Deep dive → Present & review.
+* Quick overview: Brain dump → Deep dive → Present & review.
 
 ---
 
 ## 📝 9:15 – Brain Dump Departments & Workflows (45 min)
 
-* Gather everyone in a room with whiteboards or a shared doc projected.
-* Step 1: List all departments.
-* Step 2: List the main workflows under each department.
+* List all departments.
+* List the main workflows under each department.
 * Assign an owner for each department.
 * Stop when most heads are nodding and nobody’s starting a fistfight.
 
-**Output:** A master list of departments, owners, and high-level workflows.
+**Output artifact:** A master list of departments, owners, and high-level workflows.
 
 ---
 
 ## 👥 10:00 – Department Huddles: Deep Dive (60 min)
 
-* Split into department-level groups (still in the same room).
+* Split into department groups (stay in the same room).
 * Each group:
 
   * Breaks workflows into operations.
   * Captures entities touched by those operations.
   * Assembles a scratchpad map (Dept → Workflows → Operations → Entities).
 
-**Facilitator’s role:** Float between groups, answer questions, and keep the wheels turning when energy dips.
+**Facilitator’s role:** Float between groups, answer questions, keep momentum up.
 
-**Output:** Department scratchpad maps.
+**Output artifact:** Department scratchpad maps.
 
 ---
 
-## 🍴 11:00 – Lunch & Department Presentations (60 min)
+## 🍴 11:00 – Lunch & Presentations (60 min)
 
-* As people eat, department owners present their maps one by one.
+* As people eat, department owners present their maps.
 * Encourage blunt but constructive feedback:
 
   * “Does this look like reality?”
   * “What’s missing?”
   * “Who else is impacted by this?”
-* Update maps live based on feedback.
+* Update maps live.
 
-**Output:** Validated Department Detail docs.
+**Output artifact:** Validated Department Detail docs.
 
 ---
 
 ## ✅ 12:00 – Wrap-Up & Next Steps (15 min)
 
 * Recap what was captured.
-* Highlight any obvious gaps or lopsided departments (signals for backlog).
-* Explain where this leads: *“These baselines set us up for the next PDD phase.”*
+* Highlight obvious gaps or lopsided departments (signals for backlog).
+* Explain where this leads: *“These baselines set us up for the next Feedback Loop.”*
 
-**Final Output:** A complete Strategic Baseline across departments, ready for use in the PDD Loop.
+**Final Output:** A complete Strategic Baseline across departments, ready for the Strategic Loop.
 
 ---
 
@@ -739,65 +621,864 @@ This isn’t a stiff agenda, it’s a playbook. The goal: get everyone in a room
 
 ---
 
-## 📖 Part 2 - Strategic Domain Design/2.1.4.ai-establish-the-strategic-baseline.md
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.1.4.ai-establish-the-strategic-baseline.md
 
-# Chapter 2.1.4 AI: Establish The Strategic Baseline (AI-Assisted)
+# Chapter 2.1.4 Strategic Baseline – AI Assisted
 
-Sometimes you don’t want to wrangle sticky notes and whiteboards. Maybe your team is remote, maybe nobody wants to play facilitator, or maybe you just want the artifacts to come out clean from the start. That’s where the AI-assisted version of the Strategic Baseline comes in.
+Sometimes you don’t want to wrangle sticky notes and whiteboards. Maybe your team is remote, maybe nobody wants to play facilitator, or maybe you just want the artifacts to come out clean from the start. That’s where the **AI-assisted version of the Strategic Baseline** comes in.
 
-This is the same process as the manual SOP, but instead of stopping at scratchpads, you feed your raw notes into prompts that generate polished baseline docs. The AI doesn’t replace the team’s judgment - it just handles the grunt work of formatting, structuring, and cross-referencing.
+The process is the same as the manual SOP, but instead of stopping at scratchpads, you feed raw notes into prompts that generate polished baseline docs. The AI doesn’t replace judgment — it just handles the grunt work of formatting, structuring, and cross-referencing.
 
 ---
 
 ## ✅ Quick Checklist
 
-1. Start with the **Interview Prompt** to gather raw notes from department owners and SMEs. This helps capture the messy, conversational version of “how we actually work.”
-2. Feed those interview notes into the **Department Detail Prompt** to structure each department’s map of workflows, operations, and entities.
-3. For each workflow that needs more depth, run the **Workflow Detail Prompt** to expand it into operations and entity touchpoints.
-4. Review the AI outputs as a group - check for accuracy, fill in missing details, and correct mistakes.
+1. Use the **Interview Prompt** to gather raw notes from department owners and SMEs. Capture the messy, conversational version of “how we actually work.”
+2. Feed those notes into the **Department Detail Prompt** to structure each department’s map of workflows, operations, and entities.
+3. For workflows needing more depth, run the **Workflow Detail Prompt** to expand into operations and entity touchpoints.
+4. Review the AI outputs as a group — check accuracy, fill gaps, and correct mistakes.
 5. Save the generated docs as your baseline artifacts (Department Detail, Workflow Detail, etc.).
 
 ---
 
 ## 🔧 Prompt Map
 
-| Step                  | Output Artifact (Baseline Scratchpad)         | Prompt to Use               |
-| --------------------- | --------------------------------------------- | --------------------------- |
-| Capture messy reality | Strategic Baseline                            | Interview Prompt            |
-| Structure departments | Department List (baseline scratchpad)         | Department Detail Prompt    |
-| List workflows        | Workflow List (baseline scratchpad)           | Workflow Detail Prompt      |
-| Break into operations | Workflow + Operations (baseline scratchpad)   | Workflow Detail Prompt      |
-| Capture entities      | Entity List (baseline scratchpad)             | N/A (list only at baseline) |
-| Assemble baseline     | Strategic Baseline Map (combined scratchpads) | Combine outputs from above  |
+| Step                  | Output Artifact           | Prompt to Use            |
+| --------------------- | ------------------------- | ------------------------ |
+| Capture messy reality | Strategic Baseline notes  | Interview Prompt         |
+| Structure departments | Department Detail drafts  | Department Detail Prompt |
+| List workflows        | Workflow Detail drafts    | Workflow Detail Prompt   |
+| Break into operations | Workflow + Operations map | Workflow Detail Prompt   |
+| Capture entities      | Entity List (baseline)    | N/A (list only)          |
+| Assemble baseline     | Strategic Baseline Map    | Combine outputs above    |
 
-👉 See the Appendices for the actual prompt templates. They’re copy-paste ready.
+👉 See the Appendices for copy-paste ready prompt templates.
 
 ---
 
 ## Success Criteria
 
-* The AI outputs structured, consistent docs for every department.
-* The group has reviewed and validated them (don’t skip this - AI is fast, not infallible).
-* Everyone agrees the docs reflect *reality*, not just what the AI guessed.
-* Entities are captured as a simple list for now. Detailed Entity Docs come later during the Loop, when you need precision for domain design.
+* AI outputs structured, consistent docs for every department.
+* Group review and validation is complete (AI is fast, not infallible).
+* Everyone agrees the docs reflect *reality*, not just AI guesses.
+* Entities are captured as a simple list for now — detailed docs come later during the Loop.
 
 ---
 
-👉 In short: Run the same workshop flow, but let AI handle the documentation grunt work. You still need human brains to confirm what’s true, but you’ll walk away with clean, shareable artifacts in a fraction of the time.
+👉 In short: Run the same workshop flow, but let AI handle the documentation grunt work. Humans still confirm what’s true, but you’ll walk away with clean, shareable artifacts in a fraction of the time.
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/3.0.0.tactical-domain-design-overview.md
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.0.strategic-feedback-loop.md
+
+# 2.2.0 Strategic Domain Design - Loop Overview
+
+The Baseline gave us a snapshot - a mirror held up to how the business really runs today. The Loop is what turns that snapshot into motion. It’s the engine of Practical Domain Design: every new pain, idea, or risk enters the loop, gets translated into shared artifacts, and comes out the other side as a validated decision or a parked item. Then it repeats. Simple, structured, and brutally effective.
+
+---
+
+## What is the Loop?
+
+The Loop is a **repeatable feedback cycle** that turns messy business input into testable bets. It’s not a meeting, it’s not a ritual for ritual’s sake - it’s the operating system for how decisions move from “someone raised their hand” to “this shipped and we know if it worked.”
+
+At its core, the Loop:
+
+1. **Captures** pain points in business terms.
+2. **Validates** if the problem is real and worth solving.
+3. **Frames** a vision of the better state and aligns it with company goals.
+4. **Defines** requirements in plain business language.
+5. **Packages** it all into a Product Requirements Document that feeds the tactical side.
+
+Each pass through the Loop ends in a decision: go, pivot, or park.
+
+---
+
+## How is the Loop different than the Baseline?
+
+* **Baseline = Snapshot.** It’s the “before photo” of how things work today. Departments, workflows, operations, entities - frozen in time so we know our starting point.
+* **Loop = Motion.** It’s the treadmill that keeps the business honest. Every new problem runs the same course, producing artifacts and decisions.
+
+Without a baseline, you’re improving in a vacuum. Without a loop, your baseline becomes a museum exhibit. Together, they give you both clarity (where we are) and momentum (how we improve).
+
+---
+
+## Does the Loop require a Baseline?
+
+No. The Loop works from day 1, even when there is no existing business or software. If you have no history, the first passes through the Loop create the initial facts - your early artifacts become the baseline. If you do have an existing operation, a quick baseline helps you compare before vs after and spot drift faster, but it’s optional. Rule of thumb: don’t wait on paperwork to start the Loop. Start the Loop, and let the first cycle produce the minimum baseline you need.
+
+---
+
+## Other burning questions
+
+**Is this just Agile with new words?**
+No. Agile describes values and ceremonies. The Loop is a concrete sequence with defined artifacts and exit criteria. It doesn’t replace Agile - it gives Agile teams a spine.
+
+**Does this add more paperwork?**
+No. Each artifact answers a specific question that *must* be answered sooner or later. By tackling them in the loop, you solve them cheaply and early, instead of after release when fixes are painful and expensive. The chain of artifacts builds natural traceability back to the original pain point, and because they’re short by design - a page or two, not a binder - the workload is lighter overall, not heavier.
+
+**Who runs the Loop?**
+Each step of the Loop has an owner. On the strategic side it’s often the product owner or business analyst. On the tactical side it might be a project manager. Titles don’t matter - that’s why PDD defines roles like Business Mapper, Tech Mapper, and Loop Facilitator. You decide who fills those roles at each stage. The magic is that every role has a clear hat in the process: reporter, validator, owner, stakeholder. No more “I thought you were handling that.”
+
+**How long does it take?**
+From Pain Point to PRD, a simple issue might take hours. A complex one, days. If you use the AI prompts we provide, you can literally start with a vague one-sentence pain point and build a PRD in under an hour. The cadence is flexible - weekly heartbeat plus ad-hoc urgent cycles. The important part is consistency: every issue takes the same path, no side doors.
+
+**Why should I buy into this?**
+Because it kills the two biggest killers of software delivery: **translation fatigue** (everyone guessing what the other side meant) and **decision ping-pong** (choices bouncing around until deadlines make them for us). The Loop doesn’t just give you speed - it gives you confidence that speed isn’t sending you in circles.
+
+---
+
+👉 **In short:** The Baseline is your starting map. The Loop is the vehicle. Together they turn “we think we know” into “we know, we acted, and here’s the proof.” That’s the heart of PDD - clarity, motion, and decisions that stick.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.1.business-pain-point-entry.md
+
+# 2.2.1 Business Pain Point Entry
+
+Every fire starts with smoke. The Business Pain Point Entry (PPE) is how we catch that smoke early - before the fire spreads, before the backlog fills with noise, and before everyone is arguing over symptoms instead of causes.
+
+This is the very first artifact in the Loop. It’s deliberately lightweight: a single page that captures what hurts, who it hurts, and how bad it stings. Nothing fancy, nothing polished - just enough clarity to make sure the problem doesn’t get lost.
+
+---
+
+## Purpose
+
+The purpose of the PPE is to **capture pain points in business terms**. It turns vague complaints into structured input the team can track and act on. If you don’t capture the pain clearly here, the rest of the loop risks chasing the wrong problem.
+
+---
+
+## Audience (Hats)
+
+Anyone close to the work should be able to submit a PPE:
+
+* Support agents hearing customer complaints
+* Ops staff seeing bottlenecks
+* Finance noticing billing errors
+* Product spotting churn risks
+* Engineers hitting repeated friction
+
+👉 If you see smoke, you can file a PPE. Titles don’t matter here - proximity to the problem does.
+
+---
+
+## Burning Questions It Answers
+
+* **What hurts?**  A crisp description of the problem.
+* **Who’s feeling it?**  The team, customers, or both?
+* **How bad does it sting?**  What’s the immediate impact on time, money, or sanity?
+
+These questions may sound simple, but answering them early prevents weeks of rework later. You either spend 5 minutes here or 5 weeks after release when the “fix” didn’t actually fix the real problem.
+
+---
+
+## Why It Matters
+
+Skipping PPE means you’re essentially trusting tribal knowledge and hallway conversations to carry your business problems forward. That’s a recipe for translation fatigue, forgotten details, and mismatched expectations. A simple entry creates traceability - every artifact downstream can tie back to the original pain point, building a clean chain of custody from complaint to solution.
+
+PPE is also your momentum-builder. It gives the reporter a quick win, and it gives the team something concrete to validate. With the AI prompts we provide, you can go from a vague one-sentence idea to a clear PPE in under 5 minutes.
+
+---
+
+## Template
+
+```
+# Business Pain Point Entry
+
+**Title:** [Concise, descriptive name]
+
+**Description:** [1-2 sentences with key facts from user input]
+
+**Impact:** [Clear effects mentioned by user]
+
+**Type:** [Category selected by user]
+
+**Date Logged:** [Today's date YYYY-MM-DD]
+
+**Source/Reporter:** [Person/team who identified it]
+
+**Evidence/Data:** [Metrics, examples, or "TBD - to be gathered"]
+
+**Next Steps/Notes:** [User input or "TBD"]
+```
+
+---
+
+👉 **In short:** The PPE is the smoke alarm for your business. Fast to fill out, impossible to ignore, and the foundation for everything else in the Loop.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.2.problem-validation-brief.md
+
+# 2.2.2 Problem Validation Brief
+
+A Business Pain Point Entry (PPE) captures the smoke. The Problem Validation Brief (PVB) is where we check if there’s an actual fire. Not every complaint deserves a project, and not every pain point is worth fixing right now. The PVB forces us to separate the real problems from the noise.
+
+---
+
+## Purpose
+
+The PVB exists to **validate** whether a pain point is real, significant, and worth solving. It pulls in evidence, quantifies impact, and gets stakeholders aligned. Without this step, teams burn months chasing anecdotes or politics.
+
+---
+
+## Audience (Hats)
+
+The PVB is owned and driven by the **Product/Business side**, but it pulls in voices from:
+
+* **Product** – framing the problem clearly
+* **Analytics/Data** – pulling proof from metrics and logs
+* **Finance** – confirming cost/ROI impacts
+* **Ops/Support Leads** – confirming the problem actually shows up in daily work
+
+👉 Engineering may be consulted for feasibility hints, but the PVB is about proving the problem exists in business terms.
+
+---
+
+## Burning Questions It Answers
+
+* **Is this pain real?** Do we have concrete evidence, not just opinions?
+* **Can we prove it?** What observations and metrics back this up?
+* **What’s the cost of ignoring it?** If we leave this alone, how bad will it get?
+* **Who agrees?** Which stakeholders sign off that this is a real problem worth solving?
+
+---
+
+## Why It Matters
+
+Skipping validation is how “zombie projects” are born - initiatives with no clear evidence, no measurable impact, and no defenders once things get tough. The PVB keeps the backlog honest. It makes sure energy only goes into problems with proof, alignment, and stakes.
+
+PVBs also act as insurance. Later, when someone asks “Why are we working on this?” you can point straight back to the documented evidence, quantified impact, and stakeholder alignment. No more shrugging or digging through old Slack threads.
+
+---
+
+## Template
+
+```
+# Problem Validation Brief
+
+## 1. Problem Description
+[Clear description without solutions - who/what affected, when/where it occurs]
+
+---
+
+## 2. Evidence & Observations
+- [Evidence item 1]
+- [Evidence item 2]
+- [Evidence item 3]
+
+---
+
+## 3. Quantified Impact
+- **[Metric name]:** [Value + explanation]
+- **[Metric name]:** [Value + explanation]
+- **[Metric name]:** [Value + explanation]
+
+---
+
+## 4. Validation Sources
+- [Source 1]
+- [Source 2]
+- [Source 3]
+
+---
+
+## 5. Cost of Inaction
+[Describe likely outcome if problem not fixed]
+
+---
+
+## 6. Stakeholder Alignment
+- **[Role/Title]:** [Agreement or statement]
+- **[Role/Title]:** [Agreement or statement]
+- **[Role/Title]:** [Agreement or statement]
+
+---
+
+## 7. Initial Scope Boundaries
+- **In Scope:** [Key activities/areas included]
+- **Out of Scope:** [Exclusions to prevent scope creep]
+```
+
+---
+
+👉 **In short:** The PVB is your bullshit filter. It separates signal from noise, backs it with evidence, and ensures everyone agrees the fire is real before you call in the fire brigade.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.3.vision-problem-statement.md
+
+# 2.2.3 Vision & Problem Statement
+
+The Problem Validation Brief (PVB) proved the fire is real. The Vision & Problem Statement (VPS) is where we decide what a better world looks like once the fire is out - and why it matters strategically. It connects the validated problem to a motivating, measurable future state.
+
+---
+
+## Purpose
+
+The VPS exists to **paint the better world and tie it to strategy.** It reframes the problem into a vision the business can rally around, defines measurable objectives, and shows how this effort aligns with company goals.
+
+---
+
+## Audience (Hats)
+
+The VPS is typically crafted and owned by the **Business side**, with input from:
+
+* **Business Owner / Product Lead** – drives the vision
+* **Finance** – ensures alignment with budgets and ROI
+* **Ops / Compliance** – surfaces constraints
+* **Customer / Stakeholder Reps** – ground the vision in reality
+* **Engineering Lead** – consulted for feasibility sanity checks
+
+👉 This is where strategy, not tactics, takes center stage.
+
+---
+
+## Burning Questions It Answers
+
+* **Where do we want to go?** What does success look like in concrete terms?
+* **Why now?** What’s the urgency or driver making this worth doing?
+* **How does this tie to company goals?** If it doesn’t ladder up, why bother?
+* **What constraints matter?** Budget, compliance, or technical realities that can’t be ignored.
+
+---
+
+## Why It Matters
+
+Vision without measures is just a pep talk. Measures without vision lead to local optimizations that miss the point. The VPS locks both together. It gives leadership a quick, strategic read (“does this matter to the business?”) and gives teams a north star to navigate by.
+
+It also provides the anchor for everything that follows: requirements, PRDs, tactical designs. Without a clear VPS, you risk building things that solve the wrong problem or solve the right problem in a way no one cares about.
+
+---
+
+## Template
+
+```
+# Vision & Problem Statement
+**Phase 2: Vision Framing — Business Understanding**
+
+---
+
+## 1. Document Information
+| Field | Value |
+|-------|-------|
+| **Document ID** | VPS-[YYYYMMDD]-[derived from problem] |
+| **Version** | 0.1 (Draft) |
+| **Date Created** | [Today's date] |
+| **Author(s)** | [User name if provided] |
+| **Status** | Draft |
+
+---
+
+## 2. Executive Summary
+[3-5 sentence summary combining problem + vision + strategic importance]
+
+---
+
+## 3. Problem Statement
+**3.1 Problem Description**
+[Pull from PVB - business-friendly language]
+
+**3.2 Evidence of the Problem**  
+[Pull evidence from PVB]
+
+**3.3 Root Causes (if known)**
+[Extract from PVB if available, or "TBD - requires further analysis"]
+
+---
+
+## 4. Business Impact
+| Impact Area | Description | Severity | Evidence |
+|-------------|-------------|----------|----------|
+| Financial | [From user input] | [H/M/L] | [From PVB] |
+| Customer | [From user input] | [H/M/L] | [From PVB] |
+| Operational | [From user input] | [H/M/L] | [From PVB] |
+
+---
+
+## 5. Vision Statement
+[User's ideal future state - inspiring and measurable]
+
+---
+
+## 6. Objectives & Desired Outcomes
+| Objective | Description | Success Measure |
+|-----------|-------------|-----------------|
+| [O1] | [From user input] | [KPI/metric] |
+| [O2] | [From user input] | [KPI/metric] |
+
+---
+
+## 7. Strategic Alignment
+[How this aligns with company goals - from user input]
+
+---
+
+## 8. Constraints & Considerations
+[Budget, timeline, technical, compliance constraints from user]
+
+---
+
+## 9. Stakeholder Overview
+| Name | Role | Interest/Influence | Notes |
+|------|------|-------------------|-------|
+| [Stakeholders from user input with roles] |
+
+---
+
+## 10. Approval
+| Name | Role | Signature | Date |
+|------|------|-----------|------|
+| [Key stakeholders] | | | |
+```
+
+---
+
+👉 **In short:** The VPS is your north star. It ties a validated problem to a compelling future, with measures and alignment baked in. No vision, no direction. With vision, every next step makes sense.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.4.requirements-brief.md
+
+# 2.2.4 Requirements Brief
+
+The Vision & Problem Statement gave us the north star. The Requirements Brief (RB) is where we translate that vision into clear, testable requirements the whole team can agree on. It’s not about design or solutions yet - it’s about drawing the lines that define what “done” really means.
+
+---
+
+## Purpose
+
+The RB exists to **turn vision into business-level requirements that are clear, scoped, and testable.** It ensures everyone agrees on the problem definition, goals, constraints, and success indicators before tactical design begins.
+
+---
+
+## Audience (Hats)
+
+The RB is owned by **Product**, with strong input from:
+
+* **Business Owner** – sets the boundaries of value
+* **QA Lead** – ensures requirements are testable
+* **Ops/Support** – highlights operational impacts
+* **Dev Lead** – sanity-checks feasibility
+* **Compliance/Legal** – if applicable, ensures constraints are captured
+
+👉 Think of this as the handshake document across all roles before anyone writes code.
+
+---
+
+## Burning Questions It Answers
+
+* **What must be in scope?** The core capabilities needed to realize the vision.
+* **What must stay out of scope (for now)?** The guardrails to prevent scope creep.
+* **What business rules and constraints matter?** Compliance, timelines, budgets, technical realities.
+* **What risks are lurking?** Dependencies or threats that could derail progress.
+* **What does success look like?** Clear acceptance signals agreed on by all.
+
+---
+
+## Why It Matters
+
+Projects go off the rails when scope and rules are fuzzy. The RB prevents that by forcing clarity early. It also builds traceability: every requirement ties back to the validated problem and vision. Later, when questions come up (“Why are we building this?”), the RB provides the receipts.
+
+It’s also the antidote to endless back-and-forth during sprints. With clear, business-level requirements, QA and devs can test outcomes instead of guessing intent. Everyone saves time.
+
+---
+
+## Template
+
+```
+# Requirements Brief
+**Phase 2: Requirements Definition — Business Understanding**
+
+---
+
+## 1. Document Information
+| Field | Value |
+|-------|-------|
+| **Document ID** | RB-[YYYYMMDD]-[derived from problem] |
+| **Version** | 0.1 (Draft) |
+| **Date Created** | [Today's date] |
+| **Status** | Draft |
+
+---
+
+## 2. Purpose
+This document refines the validated business problem into clear, testable requirements, ensuring all stakeholders agree on scope, constraints, and success indicators before moving to technical design.
+
+---
+
+## 3. Problem Context Summary
+**Pain Point Recap:** [From PVB]  
+**Business Impact:** [From Vision doc]  
+**Why Now:** [Strategic drivers from user input]
+
+---
+
+## 4. Goals & Objectives
+| Goal | Description | Priority | Success Measure |
+|------|-------------|----------|-----------------|
+| [From Vision doc objectives] |
+
+---
+
+## 5. Scope
+### In Scope
+[User-defined included capabilities]
+
+### Out of Scope  
+[User-defined exclusions]
+
+---
+
+## 6. Stakeholders & Roles
+[Table with stakeholders, roles, responsibilities]
+
+---
+
+## 7. Functional Requirements (Business-Level)
+| ID | Requirement Statement | Priority | Acceptance Criteria |
+|----|----------------------|----------|---------------------|
+| FR-1 | [User requirements in business language] | H | [Measurable criteria] |
+
+---
+
+## 8. Non-Functional Requirements (Business-Level)
+| ID | Category | Requirement | Priority |
+|----|----------|-------------|----------|
+| NFR-1 | Performance | [Performance standards] | H |
+| NFR-2 | Compliance | [Compliance requirements] | H |
+
+---
+
+## 9. Constraints & Assumptions
+### Constraints
+[Technical, business, regulatory constraints]
+
+### Assumptions  
+[Key assumptions about resources, data, systems]
+
+---
+
+## 10. Dependencies & Related Initiatives
+| Dependency | Description | Impact if Not Met |
+|------------|-------------|-------------------|
+| [Critical dependencies] |
+
+---
+
+## 11. Risks & Mitigation
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|------|------------|--------|-------------------|
+| [Key risks with mitigation plans] |
+
+---
+
+## 12. Acceptance Signals (Exit Criteria for Phase 2)
+- All stakeholders agree on problem definition, goals, and scope
+- Functional and non-functional requirements documented at business level  
+- Success measures are clear and testable
+- Constraints, dependencies, and risks identified
+
+---
+
+## 13. Approval
+| Name | Role | Signature | Date |
+|------|------|-----------|------|
+| [Approval stakeholders] | | | |
+```
+
+---
+
+👉 **In short:** The Requirements Brief is your contract for clarity. It keeps scope creep out, ties requirements back to vision, and defines what “done” means before anyone touches code.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.5.product-requirements-doc.md
+
+# 2.2.5 Product Requirements Document (PRD)
+
+The Requirements Brief defined what must be true for success. The Product Requirements Document (PRD) is where those requirements are packaged into a single, business-facing spec that’s clear, testable, and ready for the tactical side to pick up without guesswork.
+
+---
+
+## Purpose
+
+The PRD exists to **package the business solution in a way that’s ready for tactical translation.** It ties together the validated problem, the vision, and the requirements into a coherent business solution definition. If the PRD is fuzzy, the tactical work will be chaos.
+
+---
+
+## Audience (Hats)
+
+The PRD is owned by **Product**, but it requires tight alignment from:
+
+* **Business Owner** – confirms the solution matches the vision and ROI case
+* **QA Lead** – ensures acceptance criteria and metrics are testable
+* **Dev Lead** – sanity-checks feasibility before tactical planning
+* **Ops/Support** – validates operational impacts and readiness
+* **Compliance/Legal** – ensures regulatory constraints are captured
+
+👉 This is the last stop before translation into technical design and backlog items.
+
+---
+
+## Burning Questions It Answers
+
+* **What solution are we betting on?** The chosen business approach in plain terms.
+* **Which capabilities and rules must exist?** The non-negotiables for the solution to work.
+* **How will we measure success?** Clear KPIs and acceptance criteria that define “done.”
+* **What risks or dependencies need attention?** Early warning before tactical planning starts.
+
+---
+
+## Why It Matters
+
+If you can’t articulate the business solution clearly at this stage, you’re setting the tactical team up for endless interpretation and rework. The PRD is the handshake between strategy and tactics - the artifact that makes sure everyone is betting on the same horse before the race begins.
+
+It also locks traceability: every line in the PRD ties back to the Requirements Brief, Vision, and Validation. No orphan requirements, no “where did this come from?” features.
+
+---
+
+## Template
+
+```
+# Product Requirements Document (PRD)
+**Phase 3: Business Solution Definition — Tech-Agnostic**
+
+---
+
+## 1. Document Information
+| Field | Value |
+|-------|-------|
+| **Document ID** | PRD-[YYYYMMDD]-[derived from problem] |
+| **Version** | 0.1 (Draft) |
+| **Date Created** | [Today's date] |
+| **Author(s)** | [From Phase 2 or user input] |
+| **Status** | Draft |
+
+---
+
+## 2. Purpose & Scope
+**2.1 Purpose**
+[Why this PRD exists - reference Phase 2 documents and business problem]
+
+**2.2 Scope**
+- **In Scope:** [From Requirements Brief + user input]
+- **Out of Scope:** [From Requirements Brief + user input]
+
+---
+
+## 3. Background & Context
+[Pull from Problem Validation Brief and Vision Statement]
+- Summary of validated problem from Phase 1
+- [Any historical context or current workarounds mentioned]
+- Business drivers for addressing this now
+
+---
+
+## 4. Goals & Objectives
+[Table from Vision & Problem Statement, refined with user input]
+| Goal | Description | Priority | Success Measure |
+|------|-------------|----------|-----------------|
+| [From Phase 2 + user refinements] |
+
+---
+
+## 5. Proposed Business Solution
+**Solution Summary:** [User's core business solution description]
+
+**Key Capabilities:**
+[3-5 critical capabilities from user input]
+- [Capability 1]
+- [Capability 2]
+- [Capability 3]
+
+**Business Rules:**
+[Must-enforce rules from user input]
+- [Rule 1]
+- [Rule 2]
+- [Rule 3]
+
+**Assumptions:**
+[Conditions that must be true from user input]
+- [Assumption 1]
+- [Assumption 2]
+- [Assumption 3]
+
+---
+
+## 6. Functional Requirements
+| ID | Requirement Statement | Priority | Acceptance Criteria |
+|----|----------------------|----------|---------------------|
+| FR-1 | [User's specific functional requirements in business terms] | H | [Measurable, testable criteria] |
+| FR-2 | [Continue based on user input] | H/M/L | [Criteria] |
+| FR-3 | ... | ... | ... |
+
+---
+
+## 7. Non-Functional Requirements (Business-Level)
+| ID | Category | Requirement Statement | Priority |
+|----|----------|----------------------|----------|
+| NFR-1 | Performance | [User's performance expectations] | H |
+| NFR-2 | Availability | [Uptime/availability requirements] | H |
+| NFR-3 | Compliance | [Regulatory/policy requirements] | H |
+| NFR-4 | Usability | [User experience standards] | M |
+
+---
+
+## 8. Constraints & Dependencies
+### Constraints
+[From Requirements Brief + user input]
+- [Technical constraints]
+- [Business constraints]
+- [Regulatory constraints]
+
+### Dependencies
+| Dependency | Description | Impact if Not Met |
+|------------|-------------|-------------------|
+| [Critical dependencies from user input] |
+
+---
+
+## 9. Risks & Mitigation Strategies
+| Risk | Likelihood | Impact | Mitigation |
+|------|------------|--------|------------|
+| [Top risks from user input with mitigation plans] |
+
+---
+
+## 10. Success Metrics & KPIs
+[Business-focused metrics from user input]
+- [Metric 1: measurable business outcome]
+- [Metric 2: measurable business outcome]
+- [Metric 3: measurable business outcome]
+
+---
+
+## 11. Acceptance Criteria (Exit for Phase 3)
+- Solution is **testable in business terms**
+- Acceptance criteria are clear, measurable, and agreed upon
+- Functional and non-functional requirements fully captured
+- Stakeholders have signed off on the PRD
+- Technical teams can begin implementation planning
+
+---
+
+## 12. Approval
+| Name | Role | Signature | Date |
+|------|------|-----------|------|
+| [Business Owner from stakeholder list] | Business Owner | | |
+| [PM/PO from stakeholder list] | PM/PO | | |
+| [QA Lead] | QA Lead | | |
+```
+
+---
+
+👉 **In short:** The PRD is the handshake between strategy and tactics. It’s the last chance to lock clarity before translation into code. If it’s solid here, the tactical team runs smooth. If it’s fuzzy, welcome to chaos.
+
+---
+
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.3.0-strategic-domain-design.md
+
+# 2.3.0 Strategic Domain Design
+
+The PRD defines *what* solution we’re betting on. Strategic Domain Design (SDD) defines *where that solution lives in the business* and *how it interacts with the rest of the system.*
+
+This is the bridge between Strategic Loop and Tactical. It’s where we zoom out and ask: does this solution fit cleanly into the business, or are we about to create workflow collisions and role confusion?
+
+---
+
+## Purpose
+
+SDD ensures that every PRD-backed solution slots neatly into the business model: departments, workflows, operations, and entities. It adds context that prevents well-meaning fixes from causing bigger problems elsewhere.
+
+---
+
+## Burning Questions It Answers
+
+* What **departments** does this PRD touch?
+* Which **workflows** are involved, and who owns them?
+* Where are the **crossovers** or potential conflicts?
+* Which **operations** (steps) are required?
+* Which **business entities** are impacted?
+* Who is **allowed** to perform these workflows and operations? (roles & permissions)
+* Under what **context** can those operations be performed?
+
+---
+
+## Why It Matters
+
+PRDs are written in isolation - they describe a problem and solution, but not always how it interacts with the larger business. That’s fine for speed, but dangerous for alignment.
+
+SDD is the safeguard. It lets business stakeholders see cross-workflow and cross-department conflicts *before* the Tactical team ever touches code.
+
+Example:
+
+* Josh (League Manager) can create teams and add staff.
+* Bill (Head Coach of Anoka Trap Team) can add or remove staff for his own team, but not for others.
+
+Both rules sound fine in a PRD. But when mapped in SDD, you see they live in the same **Team Management workflow**. If not clarified, the system might allow head coaches to modify other teams, creating chaos.
+
+---
+
+## The Mapping
+
+Strategic terms map directly to Tactical terms:
+
+* **Department → Domain/Module**
+* **Workflow → Action**
+* **Operation → Service.Function**
+* **Business Entity → Model**
+
+This one-to-one mapping is what allows the business to design the system in their own language, while IT focuses on implementing it in code. Think architect (business) and builder (IT).
+
+---
+
+## Deliverable
+
+An SDD artifact is usually a structured map or table. Example:
+
+**Department: League Management**
+
+* **Workflow:** Manage Teams
+
+  * **Operations:** `Team.create`, `Team.addCoach`, `Team.addStaff`
+  * **Entities:** Team, Staff, Coach
+  * **Roles/Permissions:**
+
+    * League Manager: all operations
+    * Head Coach: only staff operations for their own team
+
+This rolls up into the same structure used on the Tactical side, which makes traceability automatic.
+
+---
+
+## What’s Next
+
+This overview is enough for small teams to see the value and slot solutions into the bigger picture.
+
+For larger or more complex orgs, we’ll dive deeper in the next sections:
+
+* **2.3.1 Departments** – define the big buckets and owners
+* **2.3.2 Workflows** – capture repeatable processes per department
+* **2.3.3 Operations** – break workflows into verb + entity steps
+* **2.3.4 Entities** – list the nouns that flow through operations
+
+---
+
+👉 **In short:** PRD defines the solution in isolation. SDD defines its place in the business. It’s how PDD ensures that solutions don’t just work - they fit.
+
+---
+
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/3.0.0.tactical-domain-design-overview.md
 
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/3.1.0.tactical-domain-design-baseline.md
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/3.1.0.tactical-domain-design-baseline.md
 
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/3.1.1.concept-baseline.md
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/3.1.1.concept-baseline.md
 
 # 7.1.1 Concept: Establish The Tactical Baseline - Documenting the Code
 
@@ -879,22 +1560,22 @@ The Tactical Baseline forces the code into daylight. It gives you a shared menta
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/7.1.2.sop.md
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/7.1.2.sop.md
 
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/7.1.3.workshop.md
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/7.1.3.workshop.md
 
 
 ---
 
-## 📖 Part 3 - Tactical Domain Design/7.2.0.tactical-loop.md
+## 📖 Part 3 - Tactical Feedback Loop (Tech Side)/7.2.0.tactical-loop.md
 
 
 ---
 
-## 📖 Part 4 - Templates/08.1.strategic-to-tactical-translation-map.md
+## 📖 Part 4 - Templates & Translation/08.1.strategic-to-tactical-translation-map.md
 
 # 8.1 Strategic to Tactical Translation Map
 
