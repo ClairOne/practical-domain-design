@@ -1,5 +1,5 @@
 # Practical Domain Design - Complete Manuscript
-**Generated:** Sat Sep 20 10:33:56 PM EST 2025
+**Generated:** Sat Sep 20 10:51:39 PM EST 2025
 **Repository:** https://github.com/ClairOne/practical-domain-design
 **Analysis URL:** https://raw.githubusercontent.com/ClairOne/practical-domain-design/main/BOOK_REVIEW.md
 
@@ -669,65 +669,72 @@ The process is the same as the manual SOP, but instead of stopping at scratchpad
 
 ---
 
-## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.0.strategic-feedback-loop.md
+## 📖 Part 2 - Strategic Feedback Loop (Business Side)/2.2.0.strategic-loop-overview.md
 
-# 2.2.0 Strategic Domain Design - Loop Overview
+# 2.2.0 Strategic Loop Overview
 
-The Baseline gave us a snapshot - a mirror held up to how the business really runs today. The Loop is what turns that snapshot into motion. It’s the engine of Practical Domain Design: every new pain, idea, or risk enters the loop, gets translated into shared artifacts, and comes out the other side as a validated decision or a parked item. Then it repeats. Simple, structured, and brutally effective.
+The Baseline gave us a snapshot - a mirror showing how the business really runs today. The Loop is what turns that snapshot into motion. It’s the engine of Feedback Loops: every new pain, idea, or risk enters the loop, gets translated into shared artifacts, and comes out the other side as a validated decision or a parked item. Then it repeats. Simple, structured, and brutally effective.
 
 ---
 
 ## What is the Loop?
 
-The Loop is a **repeatable feedback cycle** that turns messy business input into testable bets. It’s not a meeting, it’s not a ritual for ritual’s sake - it’s the operating system for how decisions move from “someone raised their hand” to “this shipped and we know if it worked.”
+The Loop is a **repeatable feedback cycle** that turns messy business input into testable bets. It’s not a meeting, it’s not theater for theater’s sake - it’s the operating system for how decisions move from *“someone raised their hand”* to *“this shipped and we know if it worked.”*
 
 At its core, the Loop:
 
 1. **Captures** pain points in business terms.
 2. **Validates** if the problem is real and worth solving.
-3. **Frames** a vision of the better state and aligns it with company goals.
+3. **Frames** a vision of the better state and ties it to company goals.
 4. **Defines** requirements in plain business language.
-5. **Packages** it all into a Product Requirements Document that feeds the tactical side.
+5. **Packages** it all into a Product Requirements Document (PRD) that feeds the tactical side.
 
-Each pass through the Loop ends in a decision: go, pivot, or park.
+Each pass through the Loop ends in a decision: **go, pivot, or park.**
 
 ---
 
-## How is the Loop different than the Baseline?
+## Baseline vs Loop
 
-* **Baseline = Snapshot.** It’s the “before photo” of how things work today. Departments, workflows, operations, entities - frozen in time so we know our starting point.
+* **Baseline = Snapshot.** It’s the “before photo” of how things work today - departments, workflows, operations, entities - frozen so we know our starting point.
 * **Loop = Motion.** It’s the treadmill that keeps the business honest. Every new problem runs the same course, producing artifacts and decisions.
 
-Without a baseline, you’re improving in a vacuum. Without a loop, your baseline becomes a museum exhibit. Together, they give you both clarity (where we are) and momentum (how we improve).
+👉 Without a baseline, you’re improving in a vacuum. Without a loop, your baseline becomes a museum exhibit. Together, they give you both clarity (where we are) and momentum (how we improve).
 
 ---
 
-## Does the Loop require a Baseline?
+## Do You Need a Baseline First?
 
-No. The Loop works from day 1, even when there is no existing business or software. If you have no history, the first passes through the Loop create the initial facts - your early artifacts become the baseline. If you do have an existing operation, a quick baseline helps you compare before vs after and spot drift faster, but it’s optional. Rule of thumb: don’t wait on paperwork to start the Loop. Start the Loop, and let the first cycle produce the minimum baseline you need.
+No. The Loop works from day 1, even if there’s no existing baseline. If you have no history, the first passes through the Loop *become* your baseline. If you do have an existing operation, a quick baseline helps you spot drift faster, but don’t wait on paperwork to start. Rule of thumb: **start the Loop, let artifacts create the minimum baseline you need.**
 
 ---
 
-## Other burning questions
+## FAQs About the Loop
 
 **Is this just Agile with new words?**
 No. Agile describes values and ceremonies. The Loop is a concrete sequence with defined artifacts and exit criteria. It doesn’t replace Agile - it gives Agile teams a spine.
 
 **Does this add more paperwork?**
-No. Each artifact answers a specific question that *must* be answered sooner or later. By tackling them in the loop, you solve them cheaply and early, instead of after release when fixes are painful and expensive. The chain of artifacts builds natural traceability back to the original pain point, and because they’re short by design - a page or two, not a binder - the workload is lighter overall, not heavier.
+No. Each artifact answers a specific question that *must* be answered sooner or later. By tackling them in the Loop, you solve them early and cheaply instead of after release when fixes are expensive. Artifacts are short by design - a page or two, not a binder.
 
 **Who runs the Loop?**
-Each step of the Loop has an owner. On the strategic side it’s often the product owner or business analyst. On the tactical side it might be a project manager. Titles don’t matter - that’s why PDD defines roles like Business Mapper, Tech Mapper, and Loop Facilitator. You decide who fills those roles at each stage. The magic is that every role has a clear hat in the process: reporter, validator, owner, stakeholder. No more “I thought you were handling that.”
+Each step has an owner. On the strategic side it’s often the product owner or business analyst. On the tactical side it might be a PM. Titles don’t matter - roles do. PDD defines clear hats: reporter, validator, owner, stakeholder. No more *“I thought you were handling that.”*
 
 **How long does it take?**
-From Pain Point to PRD, a simple issue might take hours. A complex one, days. If you use the AI prompts we provide, you can literally start with a vague one-sentence pain point and build a PRD in under an hour. The cadence is flexible - weekly heartbeat plus ad-hoc urgent cycles. The important part is consistency: every issue takes the same path, no side doors.
+From Pain Point to PRD, a simple issue might take hours. A complex one, days. With AI prompts, you can start from a vague one-liner and build a PRD in under an hour. Cadence is flexible - weekly heartbeat plus ad-hoc urgent cycles. The key is consistency: **every issue takes the same path, no side doors.**
 
-**Why should I buy into this?**
-Because it kills the two biggest killers of software delivery: **translation fatigue** (everyone guessing what the other side meant) and **decision ping-pong** (choices bouncing around until deadlines make them for us). The Loop doesn’t just give you speed - it gives you confidence that speed isn’t sending you in circles.
+**Why should I care?**
+Because the Loop kills the two biggest killers of delivery: **translation fatigue** (everyone guessing what the other side meant) and **decision ping-pong** (choices bouncing until deadlines make them for us). The Loop doesn’t just give speed - it gives confidence that speed isn’t sending you in circles.
 
 ---
 
-👉 **In short:** The Baseline is your starting map. The Loop is the vehicle. Together they turn “we think we know” into “we know, we acted, and here’s the proof.” That’s the heart of PDD - clarity, motion, and decisions that stick.
+## Real-World Example
+
+*Customer Support Backlog*
+Baseline showed that support tickets lived in 3 different systems. A rep raised a pain point: customers wait 5+ days for refunds. The team logged it as a PPE, validated the delay with metrics (PVB), framed a vision of “refunds in under 24 hours” (VPS), defined clear requirements (RB), and packaged it into a PRD. The tactical team then picked it up knowing exactly why it mattered and how success would be measured. That’s the Loop in action.
+
+---
+
+👉 **In short:** The Baseline is your starting map. The Loop is the vehicle. Together they turn *“we think we know”* into *“we know, we acted, and here’s the proof.”* That’s the heart of Feedback Loops - clarity, motion, and decisions that stick.
 
 ---
 
@@ -737,13 +744,13 @@ Because it kills the two biggest killers of software delivery: **translation fat
 
 Every fire starts with smoke. The Business Pain Point Entry (PPE) is how we catch that smoke early - before the fire spreads, before the backlog fills with noise, and before everyone is arguing over symptoms instead of causes.
 
-This is the very first artifact in the Loop. It’s deliberately lightweight: a single page that captures what hurts, who it hurts, and how bad it stings. Nothing fancy, nothing polished - just enough clarity to make sure the problem doesn’t get lost.
+This is the very first artifact in the Strategic Loop. It’s deliberately lightweight: a single page that captures what hurts, who it hurts, and how bad it stings. Nothing fancy, nothing polished - just enough clarity to make sure the problem doesn’t get lost.
 
 ---
 
 ## Purpose
 
-The purpose of the PPE is to **capture pain points in business terms**. It turns vague complaints into structured input the team can track and act on. If you don’t capture the pain clearly here, the rest of the loop risks chasing the wrong problem.
+The PPE exists to **capture pain points in business terms.** It turns vague complaints into structured input the team can track and act on. If you don’t capture the pain clearly here, the rest of the Loop risks chasing the wrong problem.
 
 ---
 
@@ -752,30 +759,30 @@ The purpose of the PPE is to **capture pain points in business terms**. It turns
 Anyone close to the work should be able to submit a PPE:
 
 * Support agents hearing customer complaints
-* Ops staff seeing bottlenecks
+* Ops staff spotting bottlenecks
 * Finance noticing billing errors
-* Product spotting churn risks
+* Product managers seeing churn risks
 * Engineers hitting repeated friction
 
-👉 If you see smoke, you can file a PPE. Titles don’t matter here - proximity to the problem does.
+👉 If you see smoke, you can file a PPE. Titles don’t matter - proximity to the problem does.
 
 ---
 
 ## Burning Questions It Answers
 
-* **What hurts?**  A crisp description of the problem.
-* **Who’s feeling it?**  The team, customers, or both?
-* **How bad does it sting?**  What’s the immediate impact on time, money, or sanity?
+* **What hurts?** A crisp description of the problem.
+* **Who’s feeling it?** The team, customers, or both?
+* **How bad does it sting?** The immediate impact on time, money, or sanity.
 
-These questions may sound simple, but answering them early prevents weeks of rework later. You either spend 5 minutes here or 5 weeks after release when the “fix” didn’t actually fix the real problem.
+These sound simple, but nailing them early prevents weeks of rework later. You either spend 5 minutes here or 5 weeks after release when the “fix” didn’t actually fix the real problem.
 
 ---
 
 ## Why It Matters
 
-Skipping PPE means you’re essentially trusting tribal knowledge and hallway conversations to carry your business problems forward. That’s a recipe for translation fatigue, forgotten details, and mismatched expectations. A simple entry creates traceability - every artifact downstream can tie back to the original pain point, building a clean chain of custody from complaint to solution.
+Skipping PPE means relying on tribal knowledge and hallway conversations to carry business problems forward. That’s a recipe for translation fatigue, forgotten details, and mismatched expectations. A simple entry creates traceability - every artifact downstream ties back to the original pain point, building a clean chain of custody from complaint to solution.
 
-PPE is also your momentum-builder. It gives the reporter a quick win, and it gives the team something concrete to validate. With the AI prompts we provide, you can go from a vague one-sentence idea to a clear PPE in under 5 minutes.
+PPE also builds momentum. It gives the reporter a quick win, and it gives the team something concrete to validate. With the AI prompts we provide, you can go from a vague one-liner to a clear PPE in under 5 minutes.
 
 ---
 
@@ -803,7 +810,7 @@ PPE is also your momentum-builder. It gives the reporter a quick win, and it giv
 
 ---
 
-👉 **In short:** The PPE is the smoke alarm for your business. Fast to fill out, impossible to ignore, and the foundation for everything else in the Loop.
+👉 **In short:** The PPE is the smoke alarm for your business. Fast to fill out, impossible to ignore, and the foundation for everything else in the Feedback Loop.
 
 ---
 
@@ -811,13 +818,13 @@ PPE is also your momentum-builder. It gives the reporter a quick win, and it giv
 
 # 2.2.2 Problem Validation Brief
 
-A Business Pain Point Entry (PPE) captures the smoke. The Problem Validation Brief (PVB) is where we check if there’s an actual fire. Not every complaint deserves a project, and not every pain point is worth fixing right now. The PVB forces us to separate the real problems from the noise.
+A Business Pain Point Entry (PPE) captures the smoke. The Problem Validation Brief (PVB) is where we check if there’s an actual fire. Not every complaint deserves a project, and not every pain point is worth fixing right now. The PVB separates the real problems from the noise.
 
 ---
 
 ## Purpose
 
-The PVB exists to **validate** whether a pain point is real, significant, and worth solving. It pulls in evidence, quantifies impact, and gets stakeholders aligned. Without this step, teams burn months chasing anecdotes or politics.
+The PVB exists to **validate** whether a pain point is real, significant, and worth solving. It pulls in evidence, quantifies impact, and gets stakeholders aligned. Without this step, teams waste months chasing anecdotes or politics.
 
 ---
 
@@ -828,7 +835,7 @@ The PVB is owned and driven by the **Product/Business side**, but it pulls in vo
 * **Product** – framing the problem clearly
 * **Analytics/Data** – pulling proof from metrics and logs
 * **Finance** – confirming cost/ROI impacts
-* **Ops/Support Leads** – confirming the problem actually shows up in daily work
+* **Ops/Support Leads** – confirming the problem shows up in daily work
 
 👉 Engineering may be consulted for feasibility hints, but the PVB is about proving the problem exists in business terms.
 
@@ -845,9 +852,9 @@ The PVB is owned and driven by the **Product/Business side**, but it pulls in vo
 
 ## Why It Matters
 
-Skipping validation is how “zombie projects” are born - initiatives with no clear evidence, no measurable impact, and no defenders once things get tough. The PVB keeps the backlog honest. It makes sure energy only goes into problems with proof, alignment, and stakes.
+Skipping validation is how “zombie projects” are born - initiatives with no evidence, no measurable impact, and no defenders once things get tough. The PVB keeps the backlog honest. It makes sure energy only goes into problems with proof, alignment, and stakes.
 
-PVBs also act as insurance. Later, when someone asks “Why are we working on this?” you can point straight back to the documented evidence, quantified impact, and stakeholder alignment. No more shrugging or digging through old Slack threads.
+PVBs also act as insurance. Later, when someone asks *“Why are we working on this?”* you can point back to the evidence, quantified impact, and stakeholder alignment. No more shrugging or digging through old Slack threads.
 
 ---
 
@@ -927,7 +934,7 @@ The VPS is typically crafted and owned by the **Business side**, with input from
 * **Finance** – ensures alignment with budgets and ROI
 * **Ops / Compliance** – surfaces constraints
 * **Customer / Stakeholder Reps** – ground the vision in reality
-* **Engineering Lead** – consulted for feasibility sanity checks
+* **Engineering Lead** – consulted for feasibility checks
 
 👉 This is where strategy, not tactics, takes center stage.
 
@@ -944,9 +951,9 @@ The VPS is typically crafted and owned by the **Business side**, with input from
 
 ## Why It Matters
 
-Vision without measures is just a pep talk. Measures without vision lead to local optimizations that miss the point. The VPS locks both together. It gives leadership a quick, strategic read (“does this matter to the business?”) and gives teams a north star to navigate by.
+Vision without measures is just a pep talk. Measures without vision lead to local optimizations that miss the point. The VPS locks both together. It gives leadership a quick, strategic read (*“does this matter to the business?”*) and gives teams a north star to navigate by.
 
-It also provides the anchor for everything that follows: requirements, PRDs, tactical designs. Without a clear VPS, you risk building things that solve the wrong problem or solve the right problem in a way no one cares about.
+It also anchors everything that follows: requirements, PRDs, tactical designs. Without a clear VPS, you risk building things that solve the wrong problem or solve the right problem in a way no one cares about.
 
 ---
 
@@ -1077,7 +1084,7 @@ The RB is owned by **Product**, with strong input from:
 
 ## Why It Matters
 
-Projects go off the rails when scope and rules are fuzzy. The RB prevents that by forcing clarity early. It also builds traceability: every requirement ties back to the validated problem and vision. Later, when questions come up (“Why are we building this?”), the RB provides the receipts.
+Projects go off the rails when scope and rules are fuzzy. The RB prevents that by forcing clarity early. It also builds traceability: every requirement ties back to the validated problem and vision. Later, when questions come up (*“Why are we building this?”*), the RB provides the receipts.
 
 It’s also the antidote to endless back-and-forth during sprints. With clear, business-level requirements, QA and devs can test outcomes instead of guessing intent. Everyone saves time.
 
@@ -1233,7 +1240,7 @@ The PRD is owned by **Product**, but it requires tight alignment from:
 
 If you can’t articulate the business solution clearly at this stage, you’re setting the tactical team up for endless interpretation and rework. The PRD is the handshake between strategy and tactics - the artifact that makes sure everyone is betting on the same horse before the race begins.
 
-It also locks traceability: every line in the PRD ties back to the Requirements Brief, Vision, and Validation. No orphan requirements, no “where did this come from?” features.
+It also locks traceability: every line in the PRD ties back to the Requirements Brief, Vision, and Validation. No orphan requirements, no *“where did this come from?”* features.
 
 ---
 
