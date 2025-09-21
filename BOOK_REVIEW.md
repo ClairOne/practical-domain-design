@@ -1,5 +1,5 @@
 # Practical Domain Design - Complete Manuscript
-**Generated:** Sat Sep 20 10:51:39 PM EST 2025
+**Generated:** Sun Sep 21 08:42:32 AM EST 2025
 **Repository:** https://github.com/ClairOne/practical-domain-design
 **Analysis URL:** https://raw.githubusercontent.com/ClairOne/practical-domain-design/main/BOOK_REVIEW.md
 
@@ -1389,7 +1389,7 @@ It also locks traceability: every line in the PRD ties back to the Requirements 
 
 The PRD defines *what* solution we’re betting on. Strategic Domain Design (SDD) defines *where that solution lives in the business* and *how it interacts with the rest of the system.*
 
-This is the bridge between Strategic Loop and Tactical. It’s where we zoom out and ask: does this solution fit cleanly into the business, or are we about to create workflow collisions and role confusion?
+This is the bridge between the Strategic Loop and the Tactical Loop. It’s where we zoom out and ask: does this solution fit cleanly into the business, or are we about to create workflow collisions and role confusion?
 
 ---
 
@@ -1471,7 +1471,7 @@ For larger or more complex orgs, we’ll dive deeper in the next sections:
 
 ---
 
-👉 **In short:** PRD defines the solution in isolation. SDD defines its place in the business. It’s how PDD ensures that solutions don’t just work - they fit.
+👉 **In short:** PRD defines the solution in isolation. SDD defines its place in the business. It’s how Feedback Loops ensure that solutions don’t just work - they fit.
 
 ---
 
