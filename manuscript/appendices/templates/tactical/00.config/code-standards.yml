@@ -1,0 +1,130 @@
+stack:
+  framework: Laravel 12
+  auth: Passport
+  authorization: Spatie Permission + Gates/Policies
+  ui: Volt + Flux
+  db: MySQL 8.x
+  testing: PEST
+  transport: [UI Routes, API Routes, Jobs, Commands]
+  config: .env flags to enable/disable modules
+
+modules:
+  mapping: Department → Module (Domain and Module are interchangeable)
+  namespace: App/<Module>
+  global_models: App/Models (optional)
+  enablement:
+    env_toggle: MODULE_<NAME>=true|false
+    service_provider: registers routes and bindings
+  seams: Only communicate across modules via Services or Events
+  folder_structure:
+    - Actions/
+    - Services/
+    - DTO/
+    - Policies/
+    - Providers/
+    - Routes/
+      - web.php
+      - api.php
+    - Jobs/
+    - Commands/
+    - Exceptions/
+    - Support/
+    - Listeners/
+
+routing:
+  split_by_module: true
+  ui_preference: Volt first, controllers as fallback
+  edges: Route → FormRequest → Action
+  scopes: web-access or api-access at route middleware
+
+entry_points:
+  allowed: [UI Routes, API Routes, Jobs, Commands, Listeners]
+  rule: All entry points call Actions only
+  jobs: wrap Actions
+  commands: thin facades over Actions
+  listeners: delegate directly to Actions, no business logic
+
+actions:
+  role: Tactical mirror of a Strategic Workflow
+  contract: ActionInputDTO → OutputDTO or ViewModel
+  validation: FormRequest or DTO validators
+  authorization: Verify Spatie Permissions
+  side_effects: Only through Services
+
+services:
+  role: Tactical mirror of a Strategic Operation
+  authorization: Enforce Gates/Policies before mutations
+  io_contracts: [ServiceInputDTO, ServiceOutputDTO]
+  cross_module: allowed via interfaces, bound in provider
+
+models:
+  scope: global (App/Models) or module scoped (App/<Module>/Models)
+  rules: Keep thin - relationships, casts, scopes, accessors only
+  policies: Define access rules, enforced by Services
+
+dtos:
+  purpose: Deterministic contracts between layers
+  types: [ActionInputDTO, ResultDTO/OutputDTO, ServiceInputDTO, ServiceOutputDTO, ViewDTO]
+  rules: Immutable where practical, no framework coupling
+
+validation:
+  edges: FormRequest mandatory
+  business_rules: Service-level
+
+authorization:
+  order:
+    1: Passport scope at route
+    2: Spatie Permission
+    3: Gate (contextual rules)
+    4: Policy (record-level decisions)
+  placement: Services enforce before mutations
+
+environment_flags:
+  module_toggle: .env variable
+  feature_flags: config or simple toggle service
+
+testing:
+  unit: required for Services, DTOs, and Actions
+  dto: serialization and invariants
+  policy: cover critical access paths
+  action: integration at module seam
+  events: test event emission and listener → Action delegation
+
+database:
+  migrations: alongside module or central with <timestamp>_<module>_<table>
+  seeds: module-specific, idempotent
+  constraints: prefer Service logic for integrity, DB constraints sparingly
+
+error_handling:
+  exceptions: module-specific, bubble to handler
+  boundaries: catch at Action edges, return safe responses
+  messaging: Services surface friendly errors only
+
+events:
+  emit: from Actions or Services to represent business facts
+  listeners: must only invoke Actions, no business logic
+  naming: past tense (e.g., TeamCreated, InvoiceSent)
+  location: Events in module, Listeners in Listeners/
+
+observability:
+  logging: structured JSON logs with correlation ids (request_id, action_run_id)
+  metrics: <module>.<action>.<result>
+  performance: log execution times of hot paths
+  event_trails: log emissions and outcomes
+
+naming_style:
+  actions: VerbNoun (ManageTeam)
+  services: <Noun>Service with verb methods (TeamService.addCoach)
+  dtos: Suffix with DTO (CreateTeamInputDTO)
+  routes: Grouped by module prefix, no long closures
+
+dependencies_boundaries:
+  no_hidden_reach_ins: true
+  interfaces: required for cross-module use
+  events_as_seams: preferred for low coupling
+
+tactical_artifacts_mapping:
+  module_detail: Department Detail
+  action_detail: Workflow Detail
+  service_detail: Operation Step Detail
+  model_detail: Business Entity Detail
